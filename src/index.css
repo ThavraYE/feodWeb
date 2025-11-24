@@ -1,0 +1,185 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* font-famaly */
+.Stack_Sans_Headline{
+  font-family: "Stack Sans Headline", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500 ;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+  color: black;
+}
+.bokor-regular {
+  font-family: "Bokor", system-ui; 
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-serif-bold {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-serif-regular-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-serif-bold-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+.container-fluid{
+    height: 200vh;
+     /* background-color: aqua;  */
+    padding: 0;
+    margin: 0;
+}
+.color_dark{
+    color:black;
+}
+.h-100px{
+    height: 100px;
+}
+.p_10px_20px_10px_0px{
+    padding: 10px 20px 10px 0px;
+}
+.w_100px{
+    width: 100px;
+}
+.w_200px{
+    width: 200px;
+}
+.w_250px{
+    width: 250px;
+}
+.top_5px{
+    top: 5px;
+}
+.top_45px{
+    top: 45px;
+}
+.top_70px{
+    top: 70px;
+}
+.top_90px{
+    top: 90px;
+}
+.l_100px{
+    left: 100px;
+}
+.l_200px{
+    left: 200px;
+}
+.l_250px{
+    left: 250px;
+}
+.object-fit{
+    object-fit: contain;
+}
+/* manu */
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.main_menu{
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px #dbe2ef3f;
+    z-index: 9999;
+    width: 100vw;
+}
+.dropdown{
+    position: relative;
+    /* padding: 20px 30px; */
+    /* background-color: rgb(23, 194, 194); */
+}
+.dropdown-content{
+    display: none;
+    top: 60px;
+    left: 0px;
+    background-color:#71C9CE;
+    position: absolute;
+    z-index: 9999;
+    /* width: 250px; */
+    border-radius: 5px;
+    transition: all 1s;
+}
+li{
+    list-style-type: none ;
+    padding: 18px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+li:hover{
+    background-color: #E3FDFD;
+}
+li:hover + .dropdown-content{
+    /* background-color: #000; */
+    display: block;
+    flex-direction: column;
+    display: flex;
+}
+.dropdown-content:hover{
+    display: block;
+    flex-direction: column;
+    display: flex;
+}
+.sub-dropdown-content{
+    background-color: #A6E3E9;
+    position: absolute;
+    display: none;
+    border-radius: 5px;
+    
+}
+.sub-dropdown{
+    position: absolute;
+    display: none;
+    background-color: #CBF1F5;
+}
+.dropdown-content .p_10px_20px_10px_0px:hover + .sub-dropdown-content{
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+.sub-dropdown .p_10px_20px_10px_0px:hover + .sub-dropdown-content{
+    display: block;
+}
+
+.sub-dropdown-content:hover{
+    display: block;
+}
+.sub-dropdown-content .upskilling:hover + .pedagogy{
+    display: block;
+}
+.sub-dropdown:hover{
+    display: block;
+    border-radius: 5px;
+}
+
+/* swiper */
+.swiper-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform; /* Performance optimization */
+        }
+        /* Ensure the track is wide enough to hold all slides */
+        .swiper-slide {
+            flex-shrink: 0; /* Prevents slides from shrinking */
+            width: 100%;
+        }
