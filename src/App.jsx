@@ -6,7 +6,7 @@ import appRoute from './Route/AppRoute'
 function App() {
   return (
     <>
-        <div className="container-fluid position-relative">
+        <div className="container_fluid position-relative">
             <RouterProvider router={appRoute}/>
         </div>
 
