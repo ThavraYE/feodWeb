@@ -9,13 +9,11 @@
   font-weight: 500 ;
   font-style: normal;
   font-variation-settings:"wdth" 100;
-  color: black;
 }
 .bokor-regular {
   font-family: "Bokor", system-ui; 
   font-weight: 400;
   font-style: normal;
-  color: black;
 }
 .pt-serif-regular {
   font-family: "PT Serif", serif;
@@ -41,17 +39,6 @@
   font-style: italic;
 }
 
-
-
-.container-fluid{
-    height: 200vh;
-     /* background-color: aqua;  */
-    padding: 0;
-    margin: 0;
-}
-.color_dark{
-    color:black;
-}
 .h-100px{
     height: 100px;
 }
@@ -113,7 +100,7 @@
     display: none;
     top: 60px;
     left: 0px;
-    background-color:#71C9CE;
+    background-color:#3396D3;
     position: absolute;
     z-index: 9999;
     /* width: 250px; */
@@ -125,9 +112,10 @@ li{
     padding: 18px 30px;
     border-radius: 5px;
     cursor: pointer;
+    color: #FFFFFF;
 }
 li:hover{
-    background-color: #E3FDFD;
+    background-color: #dbe2ef3f;
 }
 li:hover + .dropdown-content{
     /* background-color: #000; */
@@ -141,7 +129,7 @@ li:hover + .dropdown-content{
     display: flex;
 }
 .sub-dropdown-content{
-    background-color: #A6E3E9;
+    background-color: #3396D3;
     position: absolute;
     display: none;
     border-radius: 5px;
@@ -150,7 +138,7 @@ li:hover + .dropdown-content{
 .sub-dropdown{
     position: absolute;
     display: none;
-    background-color: #CBF1F5;
+    background-color: #3396D3;
 }
 .dropdown-content .p_10px_20px_10px_0px:hover + .sub-dropdown-content{
     display: block;
