@@ -3,6 +3,7 @@ import Swiper from "./Swiper";
 import ViceDean from "./ViceDean";
 import ImageSwiper from "./Swiper/ImageSwiper";
 import AutoImageSwiper from "./Swiper/AutoImageSwiper";
+import MainPastPresent from "./Past&PresentPoject-Traings/MainPastPresent";
 
 
 function Home(){
