@@ -1,6 +1,6 @@
-import HeipPastPresent from "./HeipPastPresent"
-import SeipPastPresent from './SeipPastPresent'
-import GeipPastPresent from './GeipPastPresent'
+import HeipPastPresent from "../../component/PastPresentComponent/HeipPastPresent"
+import SeipPastPresent from '../../component/PastPresentComponent/SeipPastPresent'
+import GeipPastPresent from '../../component/PastPresentComponent/GeipPastPresent'
 function MainPastPresent(){
     return(
         <>

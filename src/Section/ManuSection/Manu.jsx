@@ -9,7 +9,7 @@ function Manu(){
             </div>
             <div className="manu ">
                 <div className="navbar h-100px">
-                    <li><Link to='/' className="pt-serif-regular color_dark">Home</Link></li>
+                    <li><Link to='/home' className="pt-serif-regular color_dark">Home</Link></li>
                     <div className="dropdown ">
                         <li><Link to="#" className="dropbtn pt-serif-regular" >About Us</Link> </li>
                         <div className="dropdown-content w_250px top_5px">

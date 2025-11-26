@@ -2,51 +2,14 @@ import { useState } from "react";
 import image1 from "../assets/image/swipperImg2_1.jpg";
 import image2 from "../assets/image/swipperImg2_2.jpg";
 import image3 from "../assets/image/swipperImg2_3.jpg";
-import AutoImageSwiper from "./Swiper/AutoImageSwiper";
-import ImageSwiper from "./Swiper/ImageSwiper";
+import AutoImageSwiper from "../../component/Swiper/AutoImageSwiper";
+import ImageSwiper from "../../component/Swiper/ImageSwiper";
 
 function Swiper() {
   const [state, setSate] = useState(false);
   return (
     <>
       <div className="flex gap-4 inset-shadow-sm inset-shadow-indigo-500/50 w-full">
-        {/* <div className="col-5 mt-[150px]">
-        <div id="swiper-container" className="w-full ms-[15px] max-w-2xl bg-white shadow-2xl rounded-xl overflow-hidden relative mt-3">    
-            <div id="swiper-track" className="swiper-track">
-                <div className="swiper-slide h-96">
-                    <img src={image1}
-                        alt="Nature scene" 
-                        className="w-full h-full object-cover rounded-xl"
-                    />
-                </div>
-                <div className="swiper-slide h-96">
-                    <img src={image2}
-                        alt="Cityscape at night" 
-                        className="w-full h-full object-cover rounded-xl"
-                        
-                    />
-                </div>
-                <div className="swiper-slide h-96">
-                    <img src={image3}
-                        alt="Abstract geometric design" 
-                        className="w-full h-full object-cover rounded-xl"
-                    />
-                </div>
-            </div>
-            <button id="prev-btn" className="d-none absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-70 transition duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
-            <button id="next-btn" className="d-none absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-70 transition duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
-            <div id="dots-container" className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
-            </div>
-        </div>
-        </div> */}
         <AutoImageSwiper />
         <div className="w-1/2  mt-[150px] flex flex-col items-start">
           <h1 className=" text-2xl font-bold"> Faculty of Education</h1>
@@ -128,32 +91,6 @@ function Swiper() {
             </button> */}
           </div>
         </div>
-
-      </div>
-      <div className=" w-full h-screen flex items-center flex-col"> 
-        <h1 className=" text-3xl font-bold my-10">past & present Projects/Trainings </h1>
-
-        <div className="  w-full h-full flex  ">
-            <div className=" w-1/3 h-full ">
-            <h1 className=" border px-2 py-3  text-2xl"> SEIP</h1>
-            <div className=" w-full h-full flex">
-                <div className=" w-1/2 bg-red-400 h-full  "></div>
-                <div className=" w-1/2 bg-red-500 h-full "></div>
-            </div>
-            
-
-            </div>
-            <div className=" w-1/3 h-full bg-red-500">
-            ge
-
-            </div>
-            <div className=" w-1/3 h-full bg-red-500">
-            ge
-
-            </div>
-
-        </div>
-
 
       </div>
     </>

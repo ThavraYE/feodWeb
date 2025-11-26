@@ -1,10 +1,10 @@
 import {createBrowserRouter} from 'react-router-dom';
-import Manu from '../component/Manu';
-import Swiper from '../component/Swiper';
+import Manu from '../Section/ManuSection/Manu';
+import Swiper from '../Section/SwiperSection/Swiper';
 import HomePage from '../component/HomePage'
-import Dean from '../component/DeanPage';
-import Home from '../component/Home';
-import ProgramSection from '../component/program_section';
+import Dean from '../Section/DeanViceDeanSection/DeanPage';
+import Home from '../Page/HomePage/Home';
+import ProgramSection from '../Section/program_section';
 const appRoute = createBrowserRouter([
     {
         path:"/",
@@ -12,7 +12,7 @@ const appRoute = createBrowserRouter([
         children:[
             {
                 index: true,
-                element: <Swiper/>
+                element: <Home/>
             },
             {
                 path:"home",
