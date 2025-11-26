@@ -9,7 +9,7 @@ function Manu(){
             </div>
             <div className="manu ">
                 <div className="navbar h-100px">
-                    <li><Link to='/home' className="pt-serif-regular color_dark">Home</Link></li>
+                    <li><Link to='/' className="pt-serif-regular color_dark">Home</Link></li>
                     <div className="dropdown ">
                         <li><Link to="#" className="dropbtn pt-serif-regular" >About Us</Link> </li>
                         <div className="dropdown-content w_250px top_5px">
@@ -36,7 +36,7 @@ function Manu(){
                         </div>
                     </div>
                     <div className="dropdown">
-                        <li><Link to="program.html" className="dropbtn pt-serif-regular" >Programs</Link> </li>
+                        <li><Link to="/program" className="dropbtn pt-serif-regular" >Programs</Link> </li>
                         <div className="dropdown-content w_250px">
                                 <li className="p_10px_20px_10px_0px"><Link className="dropbtn bokor-regular">កម្មវិធីលើកកម្ពស់គុណវុឌ្ឍិគណៈគ្រប់គ្រងសាលារៀន</Link> </li>
                                 <div className="sub-dropdown-content w_200px top_5px l_250px">

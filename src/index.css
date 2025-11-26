@@ -1,7 +1,9 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+#root{
+    font-family: "Google Sans Flex", sans-serif;
+    font-style: normal;
+}
 /* font-famaly */
 .Stack_Sans_Headline{
   font-family: "Stack Sans Headline", sans-serif;
@@ -18,7 +20,6 @@
   color: black;
 }
 .pt-serif-regular {
-  font-family: "PT Serif", serif;
   font-weight: 400;
   font-style: normal;
 }
