@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import foedLogo from '../assets/image/foedLogo-removebg-preview.png'
+import foedLogo from '../../assets/image/foedLogo-removebg-preview.png'
 function Manu(){
     return(
         <>

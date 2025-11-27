@@ -1,10 +1,10 @@
-import viceDeanIamge from "../assets/image/vicedean.png";
+import viceDeanIamge from "../../assets/image/vicedean.png";
 function ViceDean() {
   return (
     <>
       <div className="grid grid-cols-3 w-full">
         <div className="mt-5">
-          <div className="profile ms-[15px] rounded-md overflow-hidden shadow-xl">
+          <div className="profile ms-[15px] rounded-md overflow-hidden shadow-xl w-[450px] h-[250px]">
             <img src={viceDeanIamge} alt="" />
           </div>
         </div>

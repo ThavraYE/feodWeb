@@ -1,4 +1,4 @@
-import DeanImage from '../assets/image/soksothImage.jpg'
+import DeanImage from '../../assets/image/soksothImage.jpg'
 function Dean(){
     return(
         <>
@@ -12,8 +12,8 @@ function Dean(){
                             </span>
                         </div>
                     </div>
-                    <div className=" mt-[130px]">
-                        <div className="profile rounded-md overflow-hidden shadow-xl">
+                    <div className=" mt-[130px] ">
+                        <div className="profile rounded-md overflow-hidden shadow-xl w-[450px] h-[250px]">
                             <img src={DeanImage} alt="" />
                         </div>
                         

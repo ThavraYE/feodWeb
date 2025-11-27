@@ -1,7 +1,7 @@
 import { useState } from "react";
-import image1 from "../assets/image/swipperImg2_1.jpg";
-import image2 from "../assets/image/swipperImg2_2.jpg";
-import image3 from "../assets/image/swipperImg2_3.jpg";
+import image1 from "../../assets/image/swipperImg2_1.jpg";
+import image2 from "../../assets/image/swipperImg2_2.jpg";
+import image3 from "../../assets/image/swipperImg2_3.jpg";
 import AutoImageSwiper from "../../component/Swiper/AutoImageSwiper";
 import ImageSwiper from "../../component/Swiper/ImageSwiper";
 
