@@ -22,11 +22,11 @@ function FooterWeb(){
                     <div className="grid-rows-2">
                         <div className="facebook mt-5 flex ">
                             <Link to="https://web.facebook.com/foerupp" target="_blank" className="text-[#FFFFFF] hover:text-[#0046FF]"><i className="fa-brands fa-facebook text-2xl text-start"><FaFacebook/></i></Link>
-                            <Link to="https://web.facebook.com/foerupp" target="_blank" className="text-[#FFFFFF] hover:text-[#0046FF] text-2xl google-sans-flex ms-[10px]">Facebook</Link>
+                            <Link to="https://web.facebook.com/foerupp" target="_blank" className="text-[#FFFFFF] hover:text-[#0046FF] text-2xl google-sans-flex ms-2.5">Facebook</Link>
                         </div>
                         <div className="youtube mt-5 flex">
                             <Link to="https://www.youtube.com/@AcademicINSETFacultyofEducatio" target="_blank" className="text-[#FFFFFF] hover:text-[#BF1A1A]"><i className="fa-brands fa-youtube text-2xl "><FaYoutube /></i></Link>
-                            <Link to="https://www.youtube.com/@AcademicINSETFacultyofEducatio" target="_blank" className="text-[#FFFFFF] hover:text-[#BF1A1A] text-2xl google-sans-flex ms-[10px]">YouTube And Resource </Link>
+                            <Link to="https://www.youtube.com/@AcademicINSETFacultyofEducatio" target="_blank" className="text-[#FFFFFF] hover:text-[#BF1A1A] text-2xl google-sans-flex ms-2.5">YouTube And Resource </Link>
                         </div> 
                     </div>
                 </div>

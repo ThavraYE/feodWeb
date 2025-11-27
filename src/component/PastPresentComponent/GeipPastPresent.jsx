@@ -8,7 +8,7 @@ function HeipPastPresent (){
                     <center><h1 className="mt-[15px] pt-serif-bold">GEIP</h1></center>
                 </div>
             </div>
-            <div className="mt-[20px] grid grid-cols-2" >
+            <div className="mt-5 grid grid-cols-2" >
                 <div className="col " >
                     <div className="MainDetail w-[98%] ms-[3px]">
                      <div className="h-[150px] radius-10px overflow-hidden">
