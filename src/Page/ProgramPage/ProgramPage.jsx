@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import imageRupp from "../../assets/image/image.png";
 import React, { useRef } from "react";
 
@@ -170,3 +171,16 @@ function ProgramPage() {
 }
 
 export default ProgramPage;
+=======
+import ECEProgramSection from "../../Section/ProgramSection/ECEProgramSection"
+function ProgramPage(){
+    return(
+        <>
+            <div className="grid grid-row ">
+                <ECEProgramSection/>
+            </div>
+        </>
+    )
+}
+export default ProgramPage
+>>>>>>> fb2718945496f60f5c4337b91bd2353cefc32107

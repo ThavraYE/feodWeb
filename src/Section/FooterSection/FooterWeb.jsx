@@ -33,7 +33,7 @@ function FooterWeb(){
             </div>
             <div className="rightWeb grid-rows-2">
                 <div className="Detail mt-5">
-                    <span className="google-sans-flex text-[#FFFFFF] text-left"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore dignissimos facilis similique dolorem eligendi atque. Quasi enim accusantium consectetur architecto labore laborum voluptatibus, iure harum sequi incidunt inventore culpa! Architecto.</span>
+                    <span className="google-sans-flex text-[#FFFFFF]  text-left "> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore dignissimos facilis similique dolorem eligendi atque. Quasi enim accusantium consectetur architecto labore laborum voluptatibus, iure harum sequi incidunt inventore culpa! Architecto.</span>
                 </div>
                 <div className="logo">
                     <img src={logo} alt="" className="w-[100px] h-[100px]"/>

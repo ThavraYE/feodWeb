@@ -5,16 +5,15 @@ import ImageSwiper from "../../component/Swiper/ImageSwiper";
 import AutoImageSwiper from "../../component/Swiper/AutoImageSwiper";
 import MainPastPresent from "../../Section/PastPresentSection/MainPastPresent";
 
-
 function Home(){
     return(
         <>
             <Swiper/>
             <MainPastPresent/>
-            <h1 class="pt-serif-bold text-2xl mt-[30px]" >Our Management and Teams </h1>
+            <h1 className="pt-serif-bold text-2xl mt-[30px]" >Our Management and Teams </h1>
             <Dean/>
             <ViceDean/>
-            
+
         </>
     )
 }
