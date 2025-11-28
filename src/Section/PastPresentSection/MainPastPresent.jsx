@@ -4,8 +4,8 @@ import GeipPastPresent from '../../component/PastPresentComponent/GeipPastPresen
 function MainPastPresent(){
     return(
         <>
-            <center><h1 class="pt-serif-bold text-2xl mt-[50px] mb-[50px]">past & present Projects/Trainings</h1></center>
-            <div class="grid grid-cols-3 gap-1 w-full  ">
+            <center><h1 className="pt-serif-bold text-2xl mt-[50px] mb-[50px]">Past & Present Projects/Trainings</h1></center>
+            <div className="grid grid-cols-3 gap-1 w-full  ">
                     <HeipPastPresent/>
                     <SeipPastPresent/>
                     <GeipPastPresent/>
