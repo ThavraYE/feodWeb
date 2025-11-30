@@ -16,7 +16,7 @@ function Swiper() {
           <div className=" flex flex-col items-start">
             <p
               className={`${
-                (state) ? "max-h-[2000px] opacity-100 " : "max-h-31 opacity-70"
+                state ? "max-h-[2000px] opacity-100 " : "max-h-31 opacity-70"
               } overflow-hidden text-justify duration-500 transition-all ease-in-out`}
             >
               {" "}
@@ -27,11 +27,11 @@ function Swiper() {
               Research and Training, a hub for cutting-edge educational
               practices and innovations. Our programs span a comprehensive
               range, from Certificates to Bachelor's (Cohort 5 as of 2024),
-              Master's (Cohort 20 as of 2024), and Ph.D. degrees in Education
-              (Cohort 5 as of 2024). Since 2018, the Ministry of Education,
-              Youth, and Sport has entrusted FoEd with the critical role of
-              professional development for principals and teachers nationwide
-              through
+              Master's (Cohort 20 as of 2024), and Ph.D. degrees{" "}
+              {!state && "..."} in Education (Cohort 5 as of 2024). Since 2018,
+              the Ministry of Education, Youth, and Sport has entrusted FoEd
+              with the critical role of professional development for principals
+              and teachers nationwide through
               <span>
                 our renowned TUP and LUP programs for early childhood education,
                 primary education and secondary education sub-sectors. Our
@@ -56,7 +56,7 @@ function Swiper() {
               onClick={() => setSate(!state)}
               className="relative mt-2 mb-2 overflow-hidden w-32 h-10 hover:text-white text-black font-medium text-lg border-2 border-black rounded-lg cursor-pointer transition-colors duration-500 group"
             >
-              {state ? "View More" : "View Less"}
+              {state ? "View Less" : "View More"}
               <span className="absolute top-full left-full w-48 h-48 bg-black rounded-full transition-all duration-700 group-active:bg-purple-900 group-hover:-top-7 group-hover:-left-7 -z-10"></span>
             </button>
             {/* <button
@@ -71,7 +71,7 @@ function Swiper() {
             <p
               className={`overflow-hidden text-justify duration-500 transition-all ease-in-out`}
             >
-               The Educational Philosophy of the Faculty of Education focuses on
+              The Educational Philosophy of the Faculty of Education focuses on
               developing human capital through best practices across all
               concerned educational sub-sectors. This philosophy emphasizes the
               following traits: the ability to research and innovate, make
@@ -91,7 +91,6 @@ function Swiper() {
             </button> */}
           </div>
         </div>
-
       </div>
     </>
   );
