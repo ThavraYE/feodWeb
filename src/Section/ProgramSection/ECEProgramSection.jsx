@@ -8,7 +8,7 @@ import LupEcePhdSection from './ECEPHD/LupEcePhdSection'
 function ECEProgramSection(){
     return(
         <>
-            <div className={`${(this.props.state) ? "hidden":"block"} content mt-[120px] w-full `}>
+            <div className={` "hidden":"block"} content mt-[120px] w-full `}>
                 <HeaderProgram/>
                 <div className="flex justify-center ">
                 <div className="ProgramContent grid grid-rows w-[1230px] overflow-hidden ">
