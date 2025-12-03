@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom'
-import logo from '../../assets/image/foedLOgo-removebg-preview.png'
+import logo from '../../assets/image/RUPP_Logo_No_bg.png'
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 function FooterWeb(){
     return(
         <>
-        <div className="footer w-full h-[400px] bg-[#3396D3] mt-5 grid grid-cols-3 gap-4 rounded-md">
+        <div className="footer w-full h-[400px] bg-[#3396D3] mt-5 grid grid-cols-3 gap-4 ">
             <div className="contectUs mt-[30px] ms-[60px] text-start">
                 <h1 className="pt-serif-bold text-2xl text-[#FFFFFF]">Contact us</h1>
                 <span className="google-sans-flex mt-5 text-[#FFFFFF]">Get in touch for enquiries, feedback, complaints and compliments.</span>
                 <Link to="096 391 9316" className="google-sans-flex text-[#FFFFFF]">Phone: 096 391 9316</Link><br />
                 <Link to="sok.soth@rupp.edu.kh " className="google-sans-flex text-[#FFFFFF]">Email: sok.soth@rupp.edu.kh </Link><br />
-                <div className="w-[180px]  h-[50px] mt-[30px]">
-                    <Link to="./contectUs.html" className=" rounded-full mt-2.5 border-purple-200 text-[#FFFFFF] hover:border-transparent hover:bg-[#FFFFFF] hover:text-[#0046FF] active:bg-[#FFFFFF]">Contect Us</Link>
+                <div className=" mt-[30px] ">
+                    <Link to="./contectUs.html" className=" rounded-md mt-2.5 border-purple-200 text-[#FFFFFF] hover:border-transparent hover:bg-[#FFFFFF] hover:text-[#0046FF] active:bg-[#FFFFFF] hover:w-[200px] hover:h-[50px]">Contect Us</Link>
                 </div>
             </div>
             <div className="followUs mt-[30px] border-x-2 border-[#FFFFFF] ">

@@ -5,13 +5,13 @@ function LupEce15CreditCertificateSection(){
     return(
         <>
             <div className="flex justify-center">
-                <div className="ProgramContent grid grid-rows w-[1230px]  overflow-hidden">
-                    <div className="content flex bg-red-300 ">
-                        <div className="credit w-40 mt-5">
-                            <p className='siemreap-regular'>១៥ ក្រេឌីត</p>   
+                <div className="ProgramContent grid grid-rows w-[1230px] ">
+                    <div className="content flex ">
+                        <div className="credit w-40  border">
+                            <p className='siemreap-regular mt-5'>១៥ ក្រេឌីត</p>   
                         </div>
-                        <div className="creditDetail w-[1070px] mt-5">
-                            <div className= {`${(state) ? "max-h-[700px] opacity-100 " : "max-h-[286px] opacity-80"} overflow-hidden text-justify duration-500 transition-all ease-in-out`}>
+                        <div className="creditDetail w-[1070px] border">
+                            <div className= {`${(state) ? "max-h-[700px] opacity-100 " : "max-h-[190px] opacity-80"} overflow-hidden text-justify duration-500 transition-all ease-in-out mt-5`}>
                                 <h1 className='siemreap-regular'>ការពិពណ៌នាមុខវិជ្ជា</h1>
                                 <p className="text-justify siemreap-regular">   ●	ការណែនាំអំពីកម្មវិធី</p>
                                 <span className='siemreap-regular'>
@@ -45,7 +45,7 @@ function LupEce15CreditCertificateSection(){
                                 className="relative mt-2 mb-2 overflow-hidden w-32 h-10 hover:text-white text-black font-medium text-lg border-2 border-black rounded-lg cursor-pointer transition-colors duration-500 group"
                                 >
                                     {state ? "View Less" : "View More"}
-                                <span className="absolute top-full left-full w-48 h-48 bg-black rounded-full transition-all duration-700 group-active:bg-purple-900 group-hover:-top-7 group-hover:-left-7 -z-10"></span>
+                                <span className="absolute top-full left-full w-48 h-48 bg-[#3396D3] rounded-full transition-all duration-700 group-active:bg-purple-900 group-hover:-top-7 group-hover:-left-7 -z-10"></span>
                             </button>
                         </div>
                     </div>

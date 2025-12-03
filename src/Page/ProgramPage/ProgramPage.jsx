@@ -1,6 +1,7 @@
-<<<<<<< HEAD
 import imageRupp from "../../assets/image/image.png";
 import React, { useRef } from "react";
+import { useState } from "react";
+import ECEProgramSection from '../../Section/ProgramSection/ECEProgramSection'
 
 function ProgramPage() {
   const sectionPage = {
@@ -31,6 +32,9 @@ function ProgramPage() {
     console.log(elementTop);
     Ref.current.scrollIntoView({ top: y, behavior: "smooth" });
   };
+  
+  const [state, setState] = useState(false); 
+  
   return (
     <>
       <section className=" w-full  ">
@@ -79,7 +83,7 @@ function ProgramPage() {
             <div className=" w-1/2 flex flex-col items-center justify-center ">
              <h1 className=" text-2xl font-bold p-4">
               {" "}
-              Primary Education Program
+              Early Childhood Education Program
             </h1>
             <table className=" m-4">
                   <tr className=" border bg-[#3396D3] text-white p-4 ">
@@ -88,7 +92,7 @@ function ProgramPage() {
                   </tr>
                   <tr className=" border p-2 ">
                     <th className="p-4 text-start ">Certificate Program</th>
-                    <th className="p-4 text-start border">Certificate Program</th>
+                    <th className="p-4 text-start border cursor-pointer" onClick={()=>setState(!state)}>Certificate Program</th>
                   </tr>
                   <tr className=" border p-2 ">
                     <th className="p-4">Bachelor's Degree Program</th>
@@ -165,22 +169,10 @@ function ProgramPage() {
           </div>
           
         </section>
+      <ECEProgramSection/>
       </section>
     </>
   );
 }
 
 export default ProgramPage;
-=======
-import ECEProgramSection from "../../Section/ProgramSection/ECEProgramSection"
-function ProgramPage(){
-    return(
-        <>
-            <div className="grid grid-row ">
-                <ECEProgramSection/>
-            </div>
-        </>
-    )
-}
-export default ProgramPage
->>>>>>> fb2718945496f60f5c4337b91bd2353cefc32107
