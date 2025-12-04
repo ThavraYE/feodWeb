@@ -157,7 +157,6 @@ function ProgramPage() {
             })}
           </div>
         </section>
-        <ECEProgramSection />
       </section>
     </>
   );
