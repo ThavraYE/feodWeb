@@ -1,14 +1,9 @@
-import HeaderProgram from "../../component/ProjectComponent/EceHeaderProgram"
-import LupEce15CreditCertificateSection from "./ECECertificate/LupEce15CreditCertificateSection"
-import LupEce4CreditCertificateSection from "./ECECertificate/LupEce4CreditCertificateSection"
-import LupEce36CreditCertificateSection from "./ECECertificate/LupEce36CreditCertificateSection"
-import LupEceBASection from './ECEBA/LupEceBASection'
-import LupEceMasterSection from './ECEMaster/LupEceMasterSection'
-import LupEcePhdSection from './ECEPHD/LupEcePhdSection'
-function ECEProgramSection(props){
+import HeaderProgram from "../../../component/ProjectComponent/EceHeaderProgram"
+import LupEceBASection from './LupEceBASection'
+function EceBaProgramSection(props){
     return(
         <>
-            <div className={`${(props.state) ? "hidden":"block"} content mt-[120px] w-full `} >
+            <div className={`${(props.state) ? "hidden":"block"} content mt-[120px] w-full `}>
                 <HeaderProgram/>
                 <div className="flex justify-center ">
                 <div className="ProgramContent grid grid-rows w-[1230px] overflow-hidden ">
@@ -22,11 +17,9 @@ function ECEProgramSection(props){
                     </div>
                 </div>
                 </div>
-                <LupEce4CreditCertificateSection/>
-                <LupEce15CreditCertificateSection/>
-                <LupEce36CreditCertificateSection/>
+                <LupEceBASection/>
             </div>
         </>
     )
 }
-export default ECEProgramSection
+export default EceBaProgramSection

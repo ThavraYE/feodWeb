@@ -2,6 +2,7 @@ import imageRupp from "../../assets/image/image.png";
 import React, { useRef } from "react";
 import { useState } from "react";
 import ECEProgramSection from '../../Section/ProgramSection/ECEProgramSection'
+import EceBaProgramSection from "../../Section/ProgramSection/ECEBA/EceBaProgramSection";
 
 function ProgramPage() {
   const sectionPage = {
@@ -32,9 +33,9 @@ function ProgramPage() {
     console.log(elementTop);
     Ref.current.scrollIntoView({ top: y, behavior: "smooth" });
   };
-  
-  const [state, setState] = useState(false); 
-  
+
+  const [state, setState] = useState(true);
+  const [stateBa, setStateBa] = useState(true);
   return (
     <>
       <section className=" w-full  ">
@@ -91,16 +92,16 @@ function ProgramPage() {
                     <th className="p-4 border-black border">Principal Education</th>
                   </tr>
                   <tr className=" border p-2 ">
-                    <th className="p-4 text-start ">Certificate Program</th>
-                    <th className="p-4 text-start border cursor-pointer" onClick={()=>setState(!state)}>Certificate Program</th>
+                    <th className="p-4 text-start cursor-pointer">Certificate Program</th>
+                    <th className="p-4 text-start border cursor-pointer hover:underline" onClick={()=>setState(!state)}>Certificate Program </th>
                   </tr>
                   <tr className=" border p-2 ">
-                    <th className="p-4">Bachelor's Degree Program</th>
-                    <th className="p-4 border">Bachelor's Degree Program</th>
+                    <th className="p-4 cursor-pointer">Bachelor's Degree Program</th>
+                    <th className="p-4 border cursor-pointer hover:underline" onClick={()=>setStateBa(!stateBa)}>Bachelor's Degree Program</th>
                   </tr>
                   <tr className=" border p-2 ">
-                    <th className="p-4 text-start">Master's Degree Program</th>
-                    <th className="p-4 text-start border">Master's Degree Program</th>
+                    <th className="p-4 text-start cursor-pointer">Master's Degree Program</th>
+                    <th className="p-4 text-start border cursor-pointer">Master's Degree Program</th>
                   </tr>
                 </table>
             </div>
@@ -121,43 +122,43 @@ function ProgramPage() {
                     <th className="p-4 border-black border">Principal Education</th>
                   </tr>
                   <tr className=" border p-2 ">
-                    <th className="p-4 text-start ">Certificate Program</th>
-                    <th className="p-4 text-start border">Certificate Program</th>
+                    <th className="p-4 text-start cursor-pointer">Certificate Program</th>
+                    <th className="p-4 text-start border cursor-pointer">Certificate Program</th>
                   </tr>
                   <tr className=" border p-2 ">
-                    <th className="p-4">Bachelor's Degree Program</th>
-                    <th className="p-4 border">Bachelor's Degree Program</th>
+                    <th className="p-4 cursor-pointer">Bachelor's Degree Program</th>
+                    <th className="p-4 border cursor-pointer">Bachelor's Degree Program</th>
                   </tr>
                   <tr className=" border p-2 ">
-                    <th className="p-4 text-start">Master's Degree Program</th>
-                    <th className="p-4 text-start border">Master's Degree Program</th>
+                    <th className="p-4 text-start cursor-pointer">Master's Degree Program</th>
+                    <th className="p-4 text-start border cursor-pointer">Master's Degree Program</th>
                   </tr>
                 </table>
             </div>
 
           </section>
-          <section className=" w-full flex flex-col items-end">
+          <section className=" w-full flex flex-col items-end" >
             <div className=" w-1/2 flex flex-col items-center justify-center ">
-             <h1 className=" text-2xl font-bold p-4">
+             <h1 className=" text-2xl font-bold p-4" >
               {" "}
               Secondary Education Program
             </h1>
             <table className=" m-4">
                   <tr className=" border bg-[#3396D3] text-white p-4 ">
-                    <th className="p-4 border-black border">Teacher Education</th>
+                    <th className="p-4 border-black border ">Teacher Education</th>
                     <th className="p-4 border-black border">Principal Education</th>
                   </tr>
                   <tr className=" border p-2 ">
-                    <th className="p-4 text-start ">Certificate Program</th>
-                    <th className="p-4 text-start border">Certificate Program</th>
+                    <th className="p-4 text-start cursor-pointer">Certificate Program</th>
+                    <th className="p-4 text-start border cursor-pointer">Certificate Program</th>
                   </tr>
                   <tr className=" border p-2 ">
-                    <th className="p-4">Bachelor's Degree Program</th>
-                    <th className="p-4 border">Bachelor's Degree Program</th>
+                    <th className="p-4 cursor-pointer">Bachelor's Degree Program</th>
+                    <th className="p-4 border cursor-pointer">Bachelor's Degree Program</th>
                   </tr>
-                  <tr className=" border p-2 ">
-                    <th className="p-4 text-start">Master's Degree Program</th>
-                    <th className="p-4 text-start border">Master's Degree Program</th>
+                  <tr className=" border p-2 " >
+                    <th className="p-4 text-start cursor-pointer">Master's Degree Program</th>
+                    <th className="p-4 text-start border cursor-pointer " >Master's Degree Program</th>
                   </tr>
                 </table>
             </div>
@@ -169,7 +170,9 @@ function ProgramPage() {
           </div>
           
         </section>
-      <ECEProgramSection/>
+       
+      <ECEProgramSection state={state} />
+      <EceBaProgramSection state={stateBa}/>
       </section>
     </>
   );

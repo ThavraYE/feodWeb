@@ -1,6 +1,6 @@
 import image from '../../../assets/image/swipperImg2_1.jpg'
 import { useState } from "react";
-function LupEce15CreditCertificateSection(){
+function LupEce36CreditCertificateSection(){
      const [state, setSate] = useState(false);
     return(
         <>
@@ -57,4 +57,4 @@ function LupEce15CreditCertificateSection(){
         </>
     )
 }
-export default LupEce15CreditCertificateSection
+export default LupEce36CreditCertificateSection
