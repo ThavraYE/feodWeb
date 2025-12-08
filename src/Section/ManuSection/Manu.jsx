@@ -3,7 +3,7 @@ import foedLogo from "../../assets/image/RUPP_Logo_No_bg.png";
 function Manu() {
   return (
     <>
-      <div className="main_menu flex justify-around items-center fixed top-0 z-[99999px] bg-[#3396D3]">
+      <div className="main_menu flex justify-around items-center fixed top-0 z-99999 bg-[#3396D3]">
         <div className="logo w-25 h-100px">
           <img src={foedLogo} alt="" className="w-[180px] h-100px object-fit" />
         </div>

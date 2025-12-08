@@ -4,7 +4,6 @@ function EceBaProgramSection(props){
     return(
         <>
             <div className={`${(props.state) ? "hidden":"block"} content mt-[120px] w-full `}>
-                <HeaderProgram/>
                 <div className="flex justify-center ">
                 <div className="ProgramContent grid grid-rows w-[1230px] overflow-hidden ">
                     <div className="content flex h-[50px] bg-[#3396D3]">

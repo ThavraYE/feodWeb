@@ -10,8 +10,8 @@ function ViceDean() {
         </div>
         <div className="col-span-2 mt-5">
           <div className="profileDetail ">
-            <span className="pt-serif-regular">
-              <h1 className="pt-serif-bold text-start ms-[25px]">
+            <p className="pt-serif-regular text-start">
+              <h1 className="pt-serif-bold text-start">
                 Associate Prof. Dr.Mam Socheath
               </h1>
               has worked in the field of education since 2005 through secondary
@@ -30,7 +30,7 @@ function ViceDean() {
               sustainability in Cambodian HEIs, and university student
               engagement in local communities towards sustainability in
               Cambodia.
-            </span>
+            </p>
           </div>
         </div>
       </div>

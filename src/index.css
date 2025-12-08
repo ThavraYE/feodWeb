@@ -1,8 +1,9 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Siemreap&display=swap');
 #root{
     font-family: "Google Sans Flex", sans-serif;
     font-style: normal;
+    font-weight: 400;
+
 }
 /* font-famaly */
 .Stack_Sans_Headline{

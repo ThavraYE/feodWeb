@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import logo from '../../assets/image/RUPP_Logo_No_bg.png'
+import logoMoeY from '../../assets/image/logoMoeY.webp'
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 function FooterWeb(){
@@ -21,12 +22,17 @@ function FooterWeb(){
                     <h1 className="pt-serif-bold text-2xl text-[#FFFFFF] text-start">Follow us</h1>
                     <div className="grid-rows-2">
                         <div className="facebook mt-5 flex ">
-                            <Link to="https://web.facebook.com/foerupp" target="_blank" className="text-[#FFFFFF] hover:text-[#0046FF]"><i className="fa-brands fa-facebook text-2xl text-start"><FaFacebook/></i></Link>
+                            <Link to="https://web.facebook.com/foerupp" target="_blank" className="text-[#FFFFFF] hover:text-[#0046FF]"><i className="fa-brands fa-facebook text-2xl text-start"></i></Link>
                             <Link to="https://web.facebook.com/foerupp" target="_blank" className="text-[#FFFFFF] hover:text-[#0046FF] text-2xl google-sans-flex ms-2.5">Facebook</Link>
                         </div>
                         <div className="youtube mt-5 flex">
-                            <Link to="https://www.youtube.com/@AcademicINSETFacultyofEducatio" target="_blank" className="text-[#FFFFFF] hover:text-[#BF1A1A]"><i className="fa-brands fa-youtube text-2xl "><FaYoutube /></i></Link>
+                            <Link to="https://www.youtube.com/@AcademicINSETFacultyofEducatio" target="_blank" className="text-[#FFFFFF] hover:text-[#BF1A1A]"><i className="fa-brands fa-youtube text-2xl "></i></Link>
                             <Link to="https://www.youtube.com/@AcademicINSETFacultyofEducatio" target="_blank" className="text-[#FFFFFF] hover:text-[#BF1A1A] text-2xl google-sans-flex ms-2.5">YouTube And Resource </Link>
+                        </div>
+                        <div className="youtube mt-5 flex">
+                            <img src={logoMoeY} alt="" className="w-[30px] h-[30px]" />
+                            <Link to="https://play.google.com/store/apps/details?id=com.geip.edtech&pcampaignid=web_share" target="_blank" className="text-[#FFFFFF] hover:underline hover:underline-offset-1 text-2xl google-sans-flex ms-2.5">PlayStore</Link><span className="text-[#FFFFFF] text-2xl google-sans-flex ms-2.5"> and</span> 
+                            <Link to="https://apps.apple.com/us/app/geip-edtech/id6504125594" target="_blank" className="text-[#FFFFFF] hover:underline hover:underline-offset-1 text-2xl google-sans-flex ms-2.5">AppStore</Link>
                         </div> 
                     </div>
                 </div>
