@@ -1,23 +1,23 @@
 import { useState, useRef, useEffect } from "react";
-import LupEceBaProgram from "../../../Section/ProgramSection/ECEBA/LupEceBaProgram"
+import LupEcePhdProgram from "../../../Section/ProgramSection/ECEPHD/LupEcePhdProgram";
 
-function DropDownBaProgram({ handleDropDownBa, setHandleDropDownBa,selectedProgram}) {
+function DropDownProgram({ handleDropDownPhd, setHandleDropDownPhd,selectedProgram}) {
   const [heightDropDown, setHeightDropDown] = useState(0);
-  const [selectedCredit, setSelectedCredit] = useState("63 Credit");
+  const [selectedCredit, setSelectedCredit] = useState("54 Credit");
   const bodyDropDown = useRef(null);
-
+  
+ 
   useEffect(() => {
-
-    // if(selectedProgram==="Early Childhood Education Program"){
-    if (handleDropDownBa) {
+     
+    // if(selectedProgram==="Primary Education Program"){
+    if (handleDropDownPhd) {
       const bodyHeight = bodyDropDown.current.scrollHeight;
       setHeightDropDown(bodyHeight + 20);
     } else {
       setHeightDropDown(0);
-      scrollToTop();
     }
-  // }
-  }, [handleDropDownBa,selectedCredit]);
+    // }
+  }, [handleDropDownPhd,selectedCredit]);
 
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -36,28 +36,36 @@ function DropDownBaProgram({ handleDropDownBa, setHandleDropDownBa,selectedProgr
       >
         <div className=" relative w-full h-full ">
           <div ref={bodyDropDown} className=" w-full h-fit">
+
             <div className="w-full h-fit">
               <div>
                 <h1 className=" text-2xl font-bold ">
-                  {selectedProgram}
+                  {selectedProgram}   
                 </h1>
               </div>
               <div className="w-full flex flex-row justify-start">
-                <p className=" text-lg p-2 font-bold">Bachelor Degree Program</p>
+                <p className=" text-lg p-2 font-bold">Phd Program</p>
               </div>
-              <div className="w-full ">
+
+              {/* testing code */}
+              {((selectedProgram === "Early Childhood Education Program")? //testing code
+              (<div className="w-full ">
                 <div className=" flex flex-row py-2">
-                  <p onClick={() => onclickCredit("63 Credit")} className={`${selectedCredit === "63 Credit" ? "bg-[#3396D3] text-white" : " hover:underline"} px-2 py-1 cursor-pointer`}>
+                  <p onClick={() => onclickCredit("54 Credit")} className={`${selectedCredit === "54 Credit" ? "bg-[#3396D3] text-white" : " hover:underline"} px-2 py-1 cursor-pointer`}>
                     {" "}
-                    63 Credit{" "}
+                    54 Credit{" "}
                   </p>
+                  
                 </div>
-              </div>
+              </div>):selectedProgram  // ):selectedProgram is for testing code
+              )}    
+
               {
                 (selectedProgram==="Early Childhood Education Program")?
-                (selectedCredit === "63 Credit" && <LupEceBaProgram />):
+                (selectedCredit === "54 Credit" && <LupEcePhdProgram />):
                 ""
               }
+              
               
             </div>
 
@@ -66,7 +74,7 @@ function DropDownBaProgram({ handleDropDownBa, setHandleDropDownBa,selectedProgr
                 <i className="fa-solid fa-angle-up"></i>To Top 
               </button>
               <button
-                onClick={() => setHandleDropDownBa(!handleDropDownBa)}
+                onClick={() => setHandleDropDownPhd(!handleDropDownPhd)}
                 className="  text-white bg-red-500 px-3 py-2"
               >
                 {" "}
@@ -80,4 +88,4 @@ function DropDownBaProgram({ handleDropDownBa, setHandleDropDownBa,selectedProgr
   );
 }
 
-export default DropDownBaProgram;
+export default DropDownProgram;

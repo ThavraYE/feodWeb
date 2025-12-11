@@ -1,18 +1,21 @@
 import { useState, useRef, useEffect } from "react";
 import LupEceMaProgram from "../../../Section/ProgramSection/ECEMaster/LupEceMaProgram"
 
-function DropDownMaProgram({ handleDropDownMa, setHandleDropDownMa }) {
+function DropDownMaProgram({ handleDropDownMa, setHandleDropDownMa,selectedProgram }) {
   const [heightDropDown, setHeightDropDown] = useState(0);
   const [selectedCredit, setSelectedCredit] = useState("63 Credit");
   const bodyDropDown = useRef(null);
 
   useEffect(() => {
+    
     if (handleDropDownMa) {
       const bodyHeight = bodyDropDown.current.scrollHeight;
       setHeightDropDown(bodyHeight + 20);
     } else {
       setHeightDropDown(0);
+      scrollToTop();
     }
+  
   }, [handleDropDownMa,selectedCredit]);
 
   function scrollToTop() {
@@ -35,11 +38,11 @@ function DropDownMaProgram({ handleDropDownMa, setHandleDropDownMa }) {
             <div className="w-full h-fit">
               <div>
                 <h1 className=" text-2xl font-bold ">
-                  Early Childhood Education Program
+                  {selectedProgram}
                 </h1>
               </div>
               <div className="w-full flex flex-row justify-start">
-                <p className=" text-lg p-2 font-bold">Bachelor Degree Program</p>
+                <p className=" text-lg p-2 font-bold">Master Degree Program</p>
               </div>
               <div className="w-full ">
                 <div className=" flex flex-row py-2">
@@ -49,8 +52,9 @@ function DropDownMaProgram({ handleDropDownMa, setHandleDropDownMa }) {
                   </p>
                 </div>
               </div>
-              {
-                selectedCredit === "63 Credit" && <LupEceMaProgram />
+              {(selectedProgram==="Early Childhood Education Program")?
+                (selectedCredit === "63 Credit" && <LupEceMaProgram />):
+                ""
               }
               
             </div>

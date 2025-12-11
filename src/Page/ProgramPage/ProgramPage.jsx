@@ -5,6 +5,8 @@ import DropDownProgram from "../../Page/ProgramPage/dropDown/DropDownProgram";
 import DropDownBaProgram from "../../Page/ProgramPage/dropDown/DropDownBaProgram";
 import TableComponent from "../../component/TableComponent/TableComponent";
 import DropDownMaProgram from "./dropDown/DropDownMaProgram";
+import DropDownPhdProgram from "./dropDown/DropDownPhdProgram";
+import EceImg from "../../assets/image/swipperImg2_1.jpg"
 
 function ProgramPage() {
   const sectionPage = {
@@ -73,6 +75,7 @@ function ProgramPage() {
       sectionNav: sectionPage.seProgram,
     },
   ];
+  const num=[1,2,3]
   const scrollTo = (Ref) => {
     const yOffset = -900;
     const element = Ref.current;
@@ -82,23 +85,33 @@ function ProgramPage() {
     console.log(elementTop);
     Ref.current.scrollIntoView({ top: y, behavior: "smooth" });
   };
-
+  
   const [state, setState] = useState(false);
-  const [handleDropDown, setHandleDropDown] = useState(false);
 
+  const [handleDropDown, setHandleDropDown] = useState(false);
   const [handleDropDownBa, setHandleDropDownBa] = useState(false);
   const [handleDropDownMa, setHandleDropDownMa] = useState(false);
+  const [handleDropDownPhd, setHandleDropDownPhd] = useState(false);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [handleDropDown]);
 
+  // add new function 
+  const [selectedProgram, setSelectedProgram] = useState("");
+  // This function will be called from TableComponent
+  const handleProgramClick = (programName) => {
+    console.log("Clicked Program:", programName);     
+    setSelectedProgram(programName);
+  };
+
   return (
     <>
       <section className=" w-full relative  ">
-        
-        <DropDownProgram setHandleDropDown={setHandleDropDown} handleDropDown={handleDropDown} />
-        <DropDownBaProgram setHandleDropDownBa={setHandleDropDownBa} handleDropDownBa={handleDropDownBa} />
-        <DropDownMaProgram setHandleDropDownMa={setHandleDropDownMa} handleDropDownMa={handleDropDownMa} />
+        <DropDownProgram setHandleDropDown={setHandleDropDown} handleDropDown={handleDropDown} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/>
+        <DropDownBaProgram setHandleDropDownBa={setHandleDropDownBa} handleDropDownBa={handleDropDownBa} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/>
+        <DropDownMaProgram setHandleDropDownMa={setHandleDropDownMa} handleDropDownMa={handleDropDownMa} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/>
+        <DropDownPhdProgram setHandleDropDownPhd={setHandleDropDownPhd} handleDropDownPhd={handleDropDownPhd} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/>
         <div className=" mt-30 w-full relative h-[400px]">
           <img className=" w-full h-full object-cover" src={imageRupp} alt="" />
           <div className=" absolute w-full left-0 top-0 bg-black/50 brightness-50 h-full "></div>
@@ -131,16 +144,28 @@ function ProgramPage() {
         </div>
         <section className=" w-full p-4  ">
           <div className=" w-full h-full relative">
+
+            {navPage.map((index,idx)=>{ 
+              return(
+                <div className={`ProgramImg mt-7  absolute 
+                  ${
+                    (idx==0) ? "left-[135px] top-13":(idx==1) ? "right-[135px] top-108":"left-[135px] top-205"
+                  }`} key={idx} >
+                    <img src={EceImg} alt="" className="w-120 h-72"/>
+                </div>
+              );
+            })}
+            
             <div className=" absolute top-0 left-1/2 -translate-x-1/2  w-20 h-full">
               <div className=" w-full h-full relative ">
                 <div className=" absolute -translate-x-1/2 left-1/2 w-2 h-full bg-[#3396D3]"></div>
                 <div className=" absolute top-2 w-10 h-10 -translate-x-1/2 left-1/2 rounded-full bg-[#3396D3]">
                   {" "}
                 </div>
-                <div className=" absolute top-83 w-10 h-10 -translate-x-1/2 left-1/2 rounded-full bg-[#3396D3]">
+                <div className=" absolute top-100 w-10 h-10 -translate-x-1/2 left-1/2 rounded-full bg-[#3396D3]">
                   {" "}
                 </div>
-                <div className=" absolute top-165 w-10 h-10 -translate-x-1/2 left-1/2 rounded-full bg-[#3396D3]">
+                <div className=" absolute top-193 w-10 h-10 -translate-x-1/2 left-1/2 rounded-full bg-[#3396D3]">
                   {" "}
                 </div>
               </div>
@@ -154,12 +179,16 @@ function ProgramPage() {
                   key={idx}
                 >
                   <TableComponent
+                    onProgramClick={handleProgramClick}
+
                     linktablesate={handleDropDown}
                     onlinktablesate={setHandleDropDown}
                     linktablesateBa={handleDropDownBa}
                     onlinktablesateBa={setHandleDropDownBa}
                     linktablesateMa={handleDropDownMa}
                     onlinktablesateMa={setHandleDropDownMa}
+                    linktablesatePhd={handleDropDownPhd}
+                    onlinktablesatePhd={setHandleDropDownPhd}
                     {...items}
                   />{" "}
                 </section>

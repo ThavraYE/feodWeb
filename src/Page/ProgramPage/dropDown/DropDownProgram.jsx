@@ -3,18 +3,22 @@ import DetailFourCredit from "./DetailAllCredit/DetailFourCredit";
 import Detail15Credit from "./DetailAllCredit/Detail15Credit";
 import Detail36Credit from "./DetailAllCredit/Detail36Credit";
 
-function DropDownProgram({ handleDropDown, setHandleDropDown }) {
+function DropDownProgram({ handleDropDown, setHandleDropDown,selectedProgram}) {
   const [heightDropDown, setHeightDropDown] = useState(0);
   const [selectedCredit, setSelectedCredit] = useState("4 Credit");
   const bodyDropDown = useRef(null);
-
+  
+ 
   useEffect(() => {
-    if (handleDropDown) {
+     
+    // if(selectedProgram==="Primary Education Program"){
+    if (handleDropDown ) {
       const bodyHeight = bodyDropDown.current.scrollHeight;
       setHeightDropDown(bodyHeight + 20);
     } else {
       setHeightDropDown(0);
     }
+    // }
   }, [handleDropDown,selectedCredit]);
 
   function scrollToTop() {
@@ -34,15 +38,20 @@ function DropDownProgram({ handleDropDown, setHandleDropDown }) {
       >
         <div className=" relative w-full h-full ">
           <div ref={bodyDropDown} className=" w-full h-fit">
+
             <div className="w-full h-fit">
               <div>
                 <h1 className=" text-2xl font-bold ">
-                  Early Childhood Education Program
+                  {selectedProgram} 
                 </h1>
               </div>
               <div className="w-full flex flex-row justify-start">
                 <p className=" text-lg p-2 font-bold">Certificate Program</p>
               </div>
+
+              {/* testing code */}
+              {(selectedProgram === "Early Childhood Education Program")? //testing code
+              (
               <div className="w-full ">
                 <div className=" flex flex-row py-2">
                   <p onClick={() => onclickCredit("4 Credit")} className={`${selectedCredit === "4 Credit" ? "bg-[#3396D3] text-white" : " hover:underline"} px-2 py-1 cursor-pointer`}>
@@ -53,15 +62,27 @@ function DropDownProgram({ handleDropDown, setHandleDropDown }) {
                   <p onClick={() => onclickCredit("36 Credit")} className={`${selectedCredit === "36 Credit" ? "bg-[#3396D3] text-white" : " hover:underline"} px-2 py-1 cursor-pointer`}>36 Credit </p>
                 </div>
               </div>
+              
+              
+              ):
+              (selectedProgram === "Primary Education Program" )? "This is Primary Education Program Page" : 
+              "This is Secondery Education Program Page" // ):selectedProgram is for testing code
+              }    
+              
               {
-                selectedCredit === "4 Credit" && <DetailFourCredit />
-              }
-              {
-                selectedCredit === "15 Credit" && <Detail15Credit />
-              }
-              {
-                selectedCredit === "36 Credit" && <Detail36Credit/>
-              }
+              (selectedProgram==="Early Childhood Education Program")?
+                ((selectedCredit === "4 Credit")?
+                <DetailFourCredit />:
+                (selectedCredit === "15 Credit")?
+                  <Detail15Credit />:
+                  (selectedCredit === "36 Credit")?
+                  <Detail36Credit/>:""
+                ):
+              ""}
+              
+              {/* {selectedCredit === "4 Credit" && <DetailFourCredit />} */}
+              {/* {selectedCredit === "15 Credit" && <Detail15Credit />} */}
+              {/* {selectedCredit === "36 Credit" && <Detail36Credit/>} */}
               
             </div>
 

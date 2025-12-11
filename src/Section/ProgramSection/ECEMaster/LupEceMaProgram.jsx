@@ -2,7 +2,7 @@ function LupEceMaProgram() {
     return(
       <div className=" w-full siemreap-regular  p-4">
       <h1 className="siemreap-regular text-start">
-        ការពិពណ៌នាមុខវិជ្ជា និងលទ្ធផលការសិក្សា MA
+        ការពិពណ៌នាមុខវិជ្ជា និងលទ្ធផលការសិក្សា
       </h1>
       <h1 className="siemreap-regular text-start px-5 py-4">ការពិពណ៌នាអំពីកម្មវិធី</h1>
       <p className="siemreap-regular px-7 py-4 text-start">● ការណែនាំអំពីកម្មវិធី</p>
