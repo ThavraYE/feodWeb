@@ -1,4 +1,6 @@
-
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
 function handleClick(message, onlinktablesate,onProgramClick,program){
     onProgramClick(program);
@@ -9,8 +11,20 @@ function handleClick(message, onlinktablesate,onProgramClick,program){
     setTimeout(() => {onlinktablesate(!message);}, 200);
     
 }
+function TeacherhandleClick(message, onlinktablesateTeacher,onProgramClick,program){
+    onProgramClick(program);
+    scrollToTop()
+    if(message){
+        onlinktablesateTeacher(false);
+        
+    }
+    setTimeout(() => {onlinktablesateTeacher(!message);}, 200);
+    
+}
+
 function handleClickBa(messageBa, onlinktablesateBa,onProgramClick,program){
     onProgramClick(program);
+    scrollToTop()
     if(messageBa){
         onlinktablesateBa(false);
     }
@@ -19,9 +33,20 @@ function handleClickBa(messageBa, onlinktablesateBa,onProgramClick,program){
     }, 200);
     
 }
+function TeacherhandleClickBa(messageBa, onlinktablesateTeacherBa,onProgramClick,program){
+    onProgramClick(program);
+    scrollToTop()
+    if(messageBa){
+        onlinktablesateTeacherBa(false);
+        
+    }
+    setTimeout(() => {onlinktablesateTeacherBa(!messageBa);}, 200);
+    
+}
 
 function handleClickMa(messageMa, onlinktablesateMa,onProgramClick,program){
     onProgramClick(program);
+    scrollToTop()
     if(messageMa){
         onlinktablesateMa(false);
     }
@@ -30,8 +55,20 @@ function handleClickMa(messageMa, onlinktablesateMa,onProgramClick,program){
     }, 200);
     
 }
+function TeacherhandleClickMa(messageMa, onlinktablesateTeacherMa,onProgramClick,program){
+    onProgramClick(program);
+    scrollToTop()
+    if(messageMa){
+        onlinktablesateTeacherMa(false);
+        
+    }
+    setTimeout(() => {onlinktablesateTeacherMa(!messageMa);}, 200);
+    
+}
+
 function handleClickPhd(messagePhd, onlinktablesatePhd,onProgramClick,program){
     onProgramClick(program);
+    scrollToTop()
     if(messagePhd){
         onlinktablesatePhd(false);
     }
@@ -40,7 +77,20 @@ function handleClickPhd(messagePhd, onlinktablesatePhd,onProgramClick,program){
     }, 200);
     
 }
-function TableComponent( {onProgramClick, program, teacherEducation, principalEducation, linktablesate, onlinktablesate,linktablesateBa,onlinktablesateBa,linktablesateMa,onlinktablesateMa,linktablesatePhd,onlinktablesatePhd }) {
+function TeacherhandleClickPhd(messagePhd, onlinktablesateTeacherPhd,onProgramClick,program){
+    onProgramClick(program);
+    scrollToTop()
+    if(messagePhd){
+        onlinktablesateTeacherPhd(false);
+        
+    }
+    setTimeout(() => {onlinktablesateTeacherPhd(!messagePhd);}, 200);
+    
+}
+
+function TableComponent( {onProgramClick, program, teacherEducation, principalEducation, linktablesate, onlinktablesate,linktablesateBa,onlinktablesateBa,
+  linktablesateMa,onlinktablesateMa,linktablesatePhd,onlinktablesatePhd,linktablesateTeacher,onlinktablesateTeacher,linktablesateTeacherBa,onlinktablesateTeacherBa,
+  linktablesateTeacherMa,onlinktablesateTeacherMa,linktablesateTeacherPhd,onlinktablesateTeacherPhd}) {
     return   <div className=" w-1/2 flex flex-col items-center justify-center ">
                 <h1 className=" text-2xl font-bold p-4">
                   {" "}
@@ -60,7 +110,7 @@ function TableComponent( {onProgramClick, program, teacherEducation, principalEd
 
                   <tbody>
                     <tr>
-                      <td onClick={(message) => handleClick(linktablesate,onlinktablesate)} className="p-4 text-start hover:underline cursor-pointer border">
+                      <td onClick={(message) => TeacherhandleClick(linktablesateTeacher,onlinktablesateTeacher,onProgramClick,program)} className="p-4 text-start hover:underline cursor-pointer border">
                         {teacherEducation[0]}
                       </td>
                       <td onClick={(message) => handleClick(linktablesate,onlinktablesate,onProgramClick,program)} className="p-4 text-start hover:underline cursor-pointer border">
@@ -69,20 +119,20 @@ function TableComponent( {onProgramClick, program, teacherEducation, principalEd
                     </tr>
 
                     <tr>
-                      <td onClick={(messageBa) => handleClickBa(linktablesateBa,onlinktablesateBa)} className="p-4 border hover:underline cursor-pointer">{teacherEducation[1]}</td>
+                      <td onClick={(messageBa) => TeacherhandleClickBa(linktablesateTeacherBa,onlinktablesateTeacherBa,onProgramClick,program)} className="p-4 border hover:underline cursor-pointer">{teacherEducation[1]}</td>
                       <td onClick={(messageBa) => handleClickBa(linktablesateBa,onlinktablesateBa,onProgramClick,program)} className="p-4 border hover:underline cursor-pointer">{principalEducation[1]}</td>
                     </tr>
 
                     <tr>
-                      <td onClick={(message) => handleClickMa(linktablesateMa,onlinktablesateMa)} className="p-4 text-start hover:underline cursor-pointer border">
+                      <td onClick={(messageMa) => TeacherhandleClickMa(linktablesateTeacherMa,onlinktablesateTeacherMa,onProgramClick,program)} className="p-4 text-start hover:underline cursor-pointer border">
                         {teacherEducation[2]}
                       </td>
-                      <td onClick={(message) => handleClickMa(linktablesateMa,onlinktablesateMa,onProgramClick,program)}  className="p-4 text-start hover:underline cursor-pointer border">
+                      <td onClick={(messageMa) => handleClickMa(linktablesateMa,onlinktablesateMa,onProgramClick,program)}  className="p-4 text-start hover:underline cursor-pointer border">
                         {principalEducation[2]}
                       </td>
                     </tr>
                     <tr>
-                      <td onClick={(message) => handleClickPhd(linktablesate,onlinktablesate)} className="p-4 text-start hover:underline cursor-pointer border">
+                      <td onClick={(message) => TeacherhandleClickPhd(linktablesateTeacherPhd,onlinktablesateTeacherPhd,onProgramClick,program)} className="p-4 text-start hover:underline cursor-pointer border">
                         {teacherEducation[3]}
                       </td>
                       <td onClick={(message) => handleClickPhd(linktablesatePhd,onlinktablesatePhd,onProgramClick,program)} className="p-4 text-start hover:underline cursor-pointer border">

@@ -3,7 +3,7 @@ import DetailFourCredit from "./DetailAllCredit/DetailFourCredit";
 import Detail15Credit from "./DetailAllCredit/Detail15Credit";
 import Detail36Credit from "./DetailAllCredit/Detail36Credit";
 
-function DropDownProgram({ handleDropDown, setHandleDropDown,selectedProgram}) {
+function TeacherDropDownProgram({ handleTeacherDropDown, setHandleTeacherDropDown,selectedProgram}) {
   const [heightDropDown, setHeightDropDown] = useState(0);
   const [selectedCredit, setSelectedCredit] = useState("4 Credit");
   const bodyDropDown = useRef(null);
@@ -12,14 +12,14 @@ function DropDownProgram({ handleDropDown, setHandleDropDown,selectedProgram}) {
   useEffect(() => {
      
     // if(selectedProgram==="Primary Education Program"){
-    if (handleDropDown ) {
+    if (handleTeacherDropDown ) {
       const bodyHeight = bodyDropDown.current.scrollHeight;
       setHeightDropDown(bodyHeight + 20);
     } else {
       setHeightDropDown(0);
     }
     // }
-  }, [handleDropDown,selectedCredit]);
+  }, [handleTeacherDropDown,selectedCredit]);
 
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -58,8 +58,7 @@ function DropDownProgram({ handleDropDown, setHandleDropDown,selectedProgram}) {
                       {" "}
                       4 Credit{" "}
                     </p>
-                    <p onClick={() => onclickCredit("15 Credit")} className={`${selectedCredit === "15 Credit" ? "bg-[#3396D3] text-white" : " hover:underline"} px-2 py-1 cursor-pointer`}>15 Credit </p>
-                    <p onClick={() => onclickCredit("36 Credit")} className={`${selectedCredit === "36 Credit" ? "bg-[#3396D3] text-white" : " hover:underline"} px-2 py-1 cursor-pointer`}>36 Credit </p>
+                    
                   </div>
                 </div>):
                 (selectedProgram === "Primary Education Program" )? 
@@ -70,14 +69,9 @@ function DropDownProgram({ handleDropDown, setHandleDropDown,selectedProgram}) {
               {/* for Detail about Program Credit  */}
               {
               (selectedProgram==="Early Childhood Education Program")?
-                ((selectedCredit === "4 Credit")?
-                <DetailFourCredit />:
-                (selectedCredit === "15 Credit")?
-                  <Detail15Credit />:
-                  (selectedCredit === "36 Credit")?
-                  <Detail36Credit/>:""
-                ):
-              ""}
+              ((selectedCredit === "4 Credit")? "This For Teacher program ":""):
+              (selectedProgram==="Primary Education Program")?
+              "This For Teacher program":"This For Teacher program"}
               
               {/* {selectedCredit === "4 Credit" && <DetailFourCredit />} */}
               {/* {selectedCredit === "15 Credit" && <Detail15Credit />} */}
@@ -90,7 +84,7 @@ function DropDownProgram({ handleDropDown, setHandleDropDown,selectedProgram}) {
                 <i className="fa-solid fa-angle-up"></i>To Top 
               </button>
               <button
-                onClick={() => setHandleDropDown(!handleDropDown)}
+                onClick={() => setHandleTeacherDropDown(!handleTeacherDropDown)}
                 className="  text-white bg-red-500 px-3 py-2"
               >
                 {" "}
@@ -104,4 +98,4 @@ function DropDownProgram({ handleDropDown, setHandleDropDown,selectedProgram}) {
   );
 }
 
-export default DropDownProgram;
+export default TeacherDropDownProgram;

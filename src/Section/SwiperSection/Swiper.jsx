@@ -57,7 +57,7 @@ function Swiper() {
               className="relative mt-2 mb-2 overflow-hidden w-32 h-10 hover:text-white text-black font-medium text-lg border-2 border-black rounded-lg cursor-pointer transition-colors duration-500 group"
             >
               {state ? "View Less" : "View More"}
-              <span className="absolute top-full left-full w-48 h-48 bg-black rounded-full transition-all duration-700 group-active:bg-purple-900 group-hover:-top-7 group-hover:-left-7 -z-10"></span>
+              <span className="absolute top-full left-full w-48 h-48 bg-[#3396D3] rounded-full transition-all duration-700 group-active:bg-purple-900 group-hover:-top-7 group-hover:-left-7 -z-10"></span>
             </button>
             {/* <button
               onClick={() => setSate(!state)}

@@ -6,6 +6,10 @@ import DropDownBaProgram from "../../Page/ProgramPage/dropDown/DropDownBaProgram
 import TableComponent from "../../component/TableComponent/TableComponent";
 import DropDownMaProgram from "./dropDown/DropDownMaProgram";
 import DropDownPhdProgram from "./dropDown/DropDownPhdProgram";
+import TeacherDropDownProgram from "./dropDown/TeacherDropDownProgram";
+import TeachDropDownBaProgram from "./dropDown/TeachDropDownBaProgram";
+import TeachDropDownMaProgram from "./dropDown/TeachDropDownMaProgram";
+import TeachDropDownPhdProgram from "./dropDown/TeachDropDownPhdProgram";
 import EceImg from "../../assets/image/swipperImg2_1.jpg"
 
 function ProgramPage() {
@@ -88,6 +92,7 @@ function ProgramPage() {
   
   const [state, setState] = useState(false);
 
+  //For Lup
   const [handleDropDown, setHandleDropDown] = useState(false);
   const [handleDropDownBa, setHandleDropDownBa] = useState(false);
   const [handleDropDownMa, setHandleDropDownMa] = useState(false);
@@ -105,13 +110,23 @@ function ProgramPage() {
     setSelectedProgram(programName);
   };
 
+  //for Tup
+ const [handleTeacherDropDown, setHandleTeacherDropDown] = useState(false);
+ const [handleTeacherDropDownBa, setHandleTeacherDropDownBa] = useState(false);
+ const [handleTeacherDropDownMa, setHandleTeacherDropDownMa] = useState(false);
+ const [handleTeacherDropDownPhd, setHandleTeacherDropDownPhd] = useState(false);
+
   return (
     <>
       <section className=" w-full relative  ">
-        <DropDownProgram setHandleDropDown={setHandleDropDown} handleDropDown={handleDropDown} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/>
+        <DropDownProgram setHandleDropDown={setHandleDropDown} handleDropDown={handleDropDown} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram} />
         <DropDownBaProgram setHandleDropDownBa={setHandleDropDownBa} handleDropDownBa={handleDropDownBa} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/>
         <DropDownMaProgram setHandleDropDownMa={setHandleDropDownMa} handleDropDownMa={handleDropDownMa} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/>
         <DropDownPhdProgram setHandleDropDownPhd={setHandleDropDownPhd} handleDropDownPhd={handleDropDownPhd} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/>
+        <TeacherDropDownProgram setHandleTeacherDropDown={setHandleTeacherDropDown} handleTeacherDropDown={handleTeacherDropDown} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/> 
+        <TeachDropDownBaProgram setHandleTeacherDropDownBa={setHandleTeacherDropDownBa} handleTeacherDropDownBa={handleTeacherDropDownBa} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/> 
+        <TeachDropDownMaProgram setHandleTeacherDropDownMa={setHandleTeacherDropDownMa} handleTeacherDropDownMa={handleTeacherDropDownMa} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/>
+        <TeachDropDownPhdProgram setHandleTeacherDropDownPhd={setHandleTeacherDropDownPhd} handleTeacherDropDownPhd={handleTeacherDropDownPhd} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/>
         <div className=" mt-30 w-full relative h-[400px]">
           <img className=" w-full h-full object-cover" src={imageRupp} alt="" />
           <div className=" absolute w-full left-0 top-0 bg-black/50 brightness-50 h-full "></div>
@@ -189,6 +204,15 @@ function ProgramPage() {
                     onlinktablesateMa={setHandleDropDownMa}
                     linktablesatePhd={handleDropDownPhd}
                     onlinktablesatePhd={setHandleDropDownPhd}
+
+                    linktablesateTeacher={handleTeacherDropDown}
+                    onlinktablesateTeacher={setHandleTeacherDropDown}
+                    linktablesateTeacherBa={handleTeacherDropDownBa}
+                    onlinktablesateTeacherBa={setHandleTeacherDropDownBa}
+                    linktablesateTeacherMa={handleTeacherDropDownMa}
+                    onlinktablesateTeacherMa={setHandleTeacherDropDownMa}
+                    linktablesateTeacherPhd={handleTeacherDropDownPhd}
+                    onlinktablesateTeacherPhd={setHandleTeacherDropDownPhd}
                     {...items}
                   />{" "}
                 </section>
