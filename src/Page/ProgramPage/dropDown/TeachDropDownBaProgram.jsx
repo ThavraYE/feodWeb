@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from "react";
+import TeachEceBaDetail from "../../../Section/ProgramSection/ECEBA/TeachEceBaDetail"
 
 function TeachDropDownBaProgram({ handleTeacherDropDownBa, setHandleTeacherDropDownBa,selectedProgram}) {
   const [heightDropDown, setHeightDropDown] = useState(0);
-  const [selectedCredit, setSelectedCredit] = useState("4 Credit");
+  const [selectedCredit, setSelectedCredit] = useState("63 Credit");
   const bodyDropDown = useRef(null);
   
  
@@ -51,9 +52,9 @@ function TeachDropDownBaProgram({ handleTeacherDropDownBa, setHandleTeacherDropD
                 (selectedProgram === "Early Childhood Education Program")? //testing code
                 (<div className="w-full ">
                   <div className=" flex flex-row py-2">
-                    <p onClick={() => onclickCredit("4 Credit")} className={`${selectedCredit === "4 Credit" ? "bg-[#3396D3] text-white" : " hover:underline"} px-2 py-1 cursor-pointer`}>
+                    <p onClick={() => onclickCredit("63 Credit")} className={`${selectedCredit === "63 Credit" ? "bg-[#3396D3] text-white" : " hover:underline"} px-2 py-1 cursor-pointer`}>
                       {" "}
-                      4 Credit{" "}
+                      63 Credit{" "}
                     </p>
                     
                   </div>
@@ -66,7 +67,7 @@ function TeachDropDownBaProgram({ handleTeacherDropDownBa, setHandleTeacherDropD
               {/* for Detail about Program Credit  */}
               {
               (selectedProgram==="Early Childhood Education Program")?
-              ((selectedCredit === "4 Credit")? "This For Teacher program ":""):
+              ((selectedCredit === "63 Credit") ? <TeachEceBaDetail />:""):
               (selectedProgram==="Primary Education Program")?
               "This For Teacher program":"This For Teacher program"}
               
