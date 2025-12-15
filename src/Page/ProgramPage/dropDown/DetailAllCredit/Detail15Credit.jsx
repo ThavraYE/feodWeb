@@ -20,7 +20,7 @@ function Detail15Credit() {
         និងការរៀនបែបឆ្លុះបញ្ចាំងនៅកម្រិតសាលារៀន និងសហគមន៍។
       </p>
       <p className="siemreap-regular  px-7 py-4 text-start">
-        ● កម្មវិធីរួមបញ្ចូល (មុខវិជ្ជាគោល)
+        ● កញ្ចប់សមត្ថភាព និងមុខវិជ្ជាគោល
       </p>
       <div className="siemreap-regular px-10 py-1 flex flex-col items-start">
         <p>១. បច្ចេកវិទ្យាអប់រំ និងប្រព័ន្ធតាមដានទិន្នន័យសិក្សា</p>

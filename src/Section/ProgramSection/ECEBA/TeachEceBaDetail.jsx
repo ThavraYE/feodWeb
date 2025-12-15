@@ -31,7 +31,7 @@ function TeachEceBaDetail() {
 
       </p>
       <p className="siemreap-regular  px-7 py-4 text-start">
-        ● កម្មវិធីរួមបញ្ចូល (មុខវិជ្ជាគោល)
+        ● កញ្ចប់សមត្ថភាព និងមុខវិជ្ជាគោល
       </p>
       <p className="siemreap-regular  px-7 py-4 text-start">
         កម្មវិធីនេះបណ្ដុះសមត្ថភាពសំខាន់ៗលើផ្នែកចំនួនបីដូចខាងក្រោម៖
