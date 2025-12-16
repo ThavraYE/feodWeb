@@ -162,9 +162,9 @@ function ProgramPage() {
 
             {navPage.map((index,idx)=>{ 
               return(
-                <div className={`ProgramImg mt-7  absolute 
+                <div className={`ProgramImg mt-7  absolute rounded-md overflow-hidden
                   ${
-                    (idx==0) ? "left-[135px] top-13":(idx==1) ? "right-[135px] top-108":"left-[135px] top-205"
+                    (idx==0) ? "left-[135px] top-13":(idx==1) ? "right-[135px] top-108":"left-[135px] top-203"
                   }`} key={idx} >
                     <img src={EceImg} alt="" className="w-120 h-72"/>
                 </div>

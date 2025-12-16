@@ -1,11 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import Manu from "../Section/ManuSection/Manu";
-import Swiper from "../Section/SwiperSection/Swiper";
 import HomePage from "../component/HomePage";
 import Dean from "../Section/DeanViceDeanSection/DeanPage";
 import Home from "../Page/HomePage/Home";
 import ProgramPage from "../Page/ProgramPage/ProgramPage";
-import ECEProgramSection from "../Section/ProgramSection/ECEProgramSection";
+import AllDetailMem from "../Page/PastAndPrensentPage/AllDetailMem";
 const appRoute = createBrowserRouter([
   {
     path: "/",
@@ -16,7 +14,7 @@ const appRoute = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "home",
+        path: "/",
         element: <Home />,
       },
       {
@@ -26,6 +24,10 @@ const appRoute = createBrowserRouter([
       {
         path: "program",
         element: <ProgramPage/>,
+      },
+      {
+        path: "our-management/all-detail-member",
+        element:<AllDetailMem/>,
       },
     ],
   },

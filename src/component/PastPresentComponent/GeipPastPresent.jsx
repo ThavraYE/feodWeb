@@ -4,7 +4,7 @@ function HeipPastPresent (){
         <>
         <div className="shadow-md rounded-sm ">
             <div className=" flex justify-center ">
-                <div className="seip w-96 bg-[#E3FDFD] h-[50px] align-middle rounded-lg">
+                <div className="seip w-96 bg-[#3396d3d8] h-[50px] align-middle rounded-lg">
                     <center><h1 className="mt-[15px] pt-serif-bold">GEIP</h1></center>
                 </div>
             </div>

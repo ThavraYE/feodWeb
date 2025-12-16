@@ -71,10 +71,6 @@ function TeachDropDownBaProgram({ handleTeacherDropDownBa, setHandleTeacherDropD
               (selectedProgram==="Primary Education Program")?
               "This For Teacher program":"This For Teacher program"}
               
-              {/* {selectedCredit === "4 Credit" && <DetailFourCredit />} */}
-              {/* {selectedCredit === "15 Credit" && <Detail15Credit />} */}
-              {/* {selectedCredit === "36 Credit" && <Detail36Credit/>} */}
-              
             </div>
 
             <div className=" w-full justify-end flex p-4 gap-4 h-1/10 mt-4">

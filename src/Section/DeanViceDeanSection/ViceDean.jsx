@@ -4,16 +4,16 @@ function ViceDean() {
     <>
       <div className="grid grid-cols-3 w-full">
         <div className="mt-5">
-          <div className="profile ms-[15px] rounded-md overflow-hidden shadow-xl w-[450px] h-[250px]">
+          <div className="profile ms-7   rounded-md overflow-hidden shadow-xl w-[450px] h-[250px]">
             <img src={viceDeanIamge} alt="" />
           </div>
         </div>
-        <div className="col-span-2 mt-5">
-          <div className="profileDetail ">
-            <p className="pt-serif-regular text-start">
-              <h1 className="pt-serif-bold text-start">
+        <div className="col-span-2 mt-5 shadow-xl me-5 rounded-md">
+          <div className="profileDetail ms-5">
+            <h1 className="pt-serif-bold text-start">
                 Associate Prof. Dr.Mam Socheath
               </h1>
+            <p className="pt-serif-regular text-start">
               has worked in the field of education since 2005 through secondary
               education level as a teacher of English and tertiary education
               level as a lecturer and researcher. He graduated his Ph.D. in
