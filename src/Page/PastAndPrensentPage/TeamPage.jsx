@@ -81,16 +81,9 @@ function TeamPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10">
+    <div className="  py-10">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-4">
-          Our Management and Teams
-        </h1>
-        <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
-          Meet our dedicated team of professionals who work together to deliver excellence
-        </p>
-
-        <div className="flex flex-wrap justify-center gap-8 mt-10">
+        <div className="flex flex-wrap justify-center gap-8 mt-3">
           {memberProfile.map((item, index) => (
             <TeamMemProfile
               key={index}

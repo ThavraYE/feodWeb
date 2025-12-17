@@ -4,13 +4,9 @@ import image2 from '../../assets/image/swipperImg2_2.jpg';
 import image3 from '../../assets/image/swipperImg2_3.jpg';
 
 // Define the images array outside the component to avoid recreating it on every render
-const images = [
-  { src: image1, alt: 'Nature scene' },
-  { src: image2, alt: 'Cityscape at night' },
-  { src: image3, alt: 'Abstract geometric design' },
-];
 
-const AutoImageSwiper = () => {
+
+const AutoImageSwiper = ({ images }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const trackRef = useRef(null);
   const timerRef = useRef(null); // Used to hold the interval ID
@@ -79,10 +75,10 @@ const AutoImageSwiper = () => {
   }, [currentSlide, totalSlides]);
 
   return (
-    <div className="col-5 mt-[150px]">
+    <div className="col-5 mt-5">
       <div 
         id="swiper-container" 
-        className="w-full ms-[15px] max-w-2xl bg-white shadow-2xl rounded-xl overflow-hidden relative mt-3"
+        className="w-full ms-[15px] max-w-2xl bg-white shadow-2xl  overflow-hidden relative mt-3"
         // Optional: Pause the timer when the user hovers over the container
         onMouseEnter={() => clearInterval(timerRef.current)}
         onMouseLeave={restartTimer}
@@ -99,7 +95,7 @@ const AutoImageSwiper = () => {
               <img 
                 src={image.src}
                 alt={image.alt} 
-                className="w-full h-full object-cover rounded-xl"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}

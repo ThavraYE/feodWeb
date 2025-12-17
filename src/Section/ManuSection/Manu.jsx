@@ -3,7 +3,7 @@ import foedLogo from "../../assets/image/RUPP_Logo_No_bg.png";
 function Manu() {
   return (
     <>
-      <div className="main_menu flex justify-around items-center fixed top-0 z-99999 bg-[#3396D3]">
+      <div className="main_menu flex justify-around items-center sticky top-0 z-99999 bg-[#3396D3] px-4 py-2">
         <div className="logo w-25 h-100px">
           <img src={foedLogo} alt="" className="w-[180px] h-100px object-fit" />
         </div>
@@ -16,7 +16,7 @@ function Manu() {
             </li>
             <div className="dropdown ">
               <li>
-                <Link to="#" className="dropbtn pt-serif-regular p-[18px_30px] text-white">
+                <Link to="/aboutUs" className="dropbtn pt-serif-regular p-[18px_30px] text-white">
                   About Us
                 </Link>{" "}
               </li>

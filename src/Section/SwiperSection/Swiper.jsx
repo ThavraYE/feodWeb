@@ -3,15 +3,19 @@ import image1 from "../../assets/image/swipperImg2_1.jpg";
 import image2 from "../../assets/image/swipperImg2_2.jpg";
 import image3 from "../../assets/image/swipperImg2_3.jpg";
 import AutoImageSwiper from "../../component/Swiper/AutoImageSwiper";
-import ImageSwiper from "../../component/Swiper/ImageSwiper";
-
+const images = [
+  { src: image1, alt: 'Nature scene' },
+  { src: image2, alt: 'Cityscape at night' },
+  { src: image3, alt: 'Abstract geometric design' },
+];
 function Swiper() {
   const [state, setSate] = useState(false);
   return (
     <>
-      <div className="flex gap-4 inset-shadow-sm inset-shadow-indigo-500/50 w-full">
-        <AutoImageSwiper />
-        <div className="w-1/2  mt-[150px] flex flex-col items-start">
+      <div className="flex gap-4 shadow-md w-full">
+        
+        <AutoImageSwiper images={images}/>
+        <div className="w-1/2  mt-5  flex flex-col items-start">
           <h1 className=" text-2xl font-bold"> Faculty of Education</h1>
           <div className=" flex flex-col items-start">
             <p

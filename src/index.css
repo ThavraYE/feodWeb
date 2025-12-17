@@ -94,7 +94,6 @@
 .main_menu{
     padding: 10px;
     z-index: 9999;
-    width: 100vw;
 }
 .dropdown{
     position: relative;

@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../component/HomePage";
 import Dean from "../Section/DeanViceDeanSection/DeanPage";
 import Home from "../Page/HomePage/Home";
+import AboutUsPage from "../Page/AboutUsPage/AboutUsPage";
 import ProgramPage from "../Page/ProgramPage/ProgramPage";
 import AllDetailMem from "../Page/PastAndPrensentPage/AllDetailMem";
 const appRoute = createBrowserRouter([
@@ -16,6 +17,10 @@ const appRoute = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "aboutUs",
+        element: <AboutUsPage />,
       },
       {
         path: "aboutUs/Dean",

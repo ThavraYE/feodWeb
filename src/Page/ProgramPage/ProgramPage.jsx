@@ -127,7 +127,7 @@ function ProgramPage() {
         <TeachDropDownBaProgram setHandleTeacherDropDownBa={setHandleTeacherDropDownBa} handleTeacherDropDownBa={handleTeacherDropDownBa} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/> 
         <TeachDropDownMaProgram setHandleTeacherDropDownMa={setHandleTeacherDropDownMa} handleTeacherDropDownMa={handleTeacherDropDownMa} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/>
         <TeachDropDownPhdProgram setHandleTeacherDropDownPhd={setHandleTeacherDropDownPhd} handleTeacherDropDownPhd={handleTeacherDropDownPhd} selectedProgram={selectedProgram} setSelectedProgram={setSelectedProgram}/>
-        <div className=" mt-30 w-full relative h-[400px]">
+        <div className="w-full relative h-[400px]">
           <img className=" w-full h-full object-cover" src={imageRupp} alt="" />
           <div className=" absolute w-full left-0 top-0 bg-black/50 brightness-50 h-full "></div>
           <div className=" absolute flex flex-col gap-5  items-start bottom-5 left-12 h-60">
