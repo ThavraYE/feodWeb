@@ -10,12 +10,12 @@ function AllDetailMem({ selectedMember }) {
               <h1 className="text-4xl md:text-5xl font-light text-blue-600 mb-2">
                {selectedMember.name}
               </h1>
-              <p className="text-gray-600 text-lg">Marketing Manager</p>
+              <p className="text-gray-600 text-lg">{selectedMember.duty}</p>
             </div>
             <div className="flex justify-center mb-8">
               <div className="w-48 h-48 rounded-full bg-gray-300 overflow-hidden">
                 <img
-                  src="https://via.placeholder.com/200" 
+                  src={selectedMember.image} 
                   alt="Lorna Alvarado"
                   className="w-full h-full object-cover"
                 />
@@ -28,18 +28,18 @@ function AllDetailMem({ selectedMember }) {
               <div className="space-y-4">
                 <div className="flex items-start">
                   <i className="fas fa-phone text-blue-400 mt-1 mr-3"></i>
-                  <span className="text-gray-600">+123-456-7890</span>
+                  <span className="text-gray-600">{selectedMember.contect[0]}</span>
                 </div>
                 <div className="flex items-start">
                   <i className="fas fa-envelope text-blue-400 mt-1 mr-3"></i>
                   <span className="text-gray-600 break-all">
-                    hello@reallygreatsite.com
+                    {selectedMember.name}{selectedMember.contect[1]}
                   </span>
                 </div>
                 <div className="flex items-start">
                   <i className="fas fa-map-marker-alt text-blue-400 mt-1 mr-3"></i>
                   <span className="text-gray-600">
-                    123 Anywhere St., Any City, ST 12345
+                    {selectedMember.contect[2]}
                   </span>
                 </div>
               </div>
@@ -51,7 +51,7 @@ function AllDetailMem({ selectedMember }) {
                 About Me
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                {selectedMember.memDetail}  
               </p>
             </div>
 
@@ -61,30 +61,15 @@ function AllDetailMem({ selectedMember }) {
                 Skills
               </h2>
               <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
+
+                {selectedMember.Memskill.map((item)=>{
+                  return(
+                  <li key={item} className="flex items-center">
                   <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  Management Skills
+                  {item}
                 </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  Creativity
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  Digital Marketing
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  Negotiation
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  Critical Thinking
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  Leadership
-                </li>
+                )})}
+
               </ul>
             </div>
           </div>
@@ -98,37 +83,23 @@ function AllDetailMem({ selectedMember }) {
               </h2>
 
               {/* Education Entry 1 */}
-              {
-                
-              }
-              <div className="mb-6 relative pl-6">
-                <div className="absolute left-0 top-1 w-3 h-3 bg-blue-400 rounded-full"></div>
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-semibold text-gray-800">
-                    Bachelor of Business Management
-                  </h3>
-                  <span className="text-gray-500 text-sm">2016 - 2020</span>
-                </div>
-                <p className="text-blue-600 italic mb-2">Borcelle University</p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin in arcu.
-                </p>
-              </div>
-
-              {/* Education Entry 2 */}
-              <div className="relative pl-6">
-                <div className="absolute left-0 top-1 w-3 h-3 bg-blue-400 rounded-full"></div>
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-semibold text-gray-800">
-                    Bachelor of Business Management
-                  </h3>
-                  <span className="text-gray-500 text-sm">2020 - 2023</span>
-                </div>
-                <p className="text-blue-600 italic mb-2">Borcelle University</p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin in arcu.
-                </p>
-              </div>
+              {selectedMember.memEducation.map((item)=>{
+                return(
+                  <div className="mb-6 relative pl-6">
+                    <div className="absolute left-0 top-1 w-3 h-3 bg-blue-400 rounded-full"></div>
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="text-xl font-semibold text-gray-800">
+                        {item.degree}
+                      </h3>
+                      <span className="text-gray-500 text-sm">{item.dateGraduate}</span>
+                    </div>
+                    <p className="text-blue-600 italic mb-2">{item.school}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {item.eduDetail}
+                    </p>
+                  </div>
+                )
+              })}
             </div>
 
             {/* Experience Section */}
@@ -138,12 +109,7 @@ function AllDetailMem({ selectedMember }) {
               </h2>
 
               {/* Experience Entries */}
-              {[
-                { title: "Product Design Manager", years: "2016 - 2020" },
-                { title: "Marketing Manager", years: "2019 - 2020" },
-                { title: "Marketing Manager", years: "2017 - 2019" },
-                { title: "Marketing Manager", years: "2016 - 2017" },
-              ].map((exp, index) => (
+              {selectedMember.experience.map((exp, index) => (
                 <div key={index} className="mb-6 relative pl-6">
                   <div className="absolute left-0 top-1 w-3 h-3 bg-blue-400 rounded-full"></div>
                   <div className="flex justify-between items-start mb-2">
@@ -152,9 +118,9 @@ function AllDetailMem({ selectedMember }) {
                     </h3>
                     <span className="text-gray-500 text-sm">{exp.years}</span>
                   </div>
-                  <p className="text-blue-600 italic mb-2">Arowwai Industries</p>
+                  <p className="text-blue-600 italic mb-2">{exp.company}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque.
+                    {exp.titleDetail}
                   </p>
                 </div>
               ))}
