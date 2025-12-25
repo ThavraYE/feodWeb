@@ -75,10 +75,10 @@ const AutoImageSwiper = ({ images }) => {
   }, [currentSlide, totalSlides]);
 
   return (
-    <div className="col-5 mt-5">
+    <div className="col-5 mt-3 ">
       <div 
         id="swiper-container" 
-        className="w-full ms-[15px] max-w-2xl bg-white shadow-2xl  overflow-hidden relative mt-3"
+        className="w-full ms-[15px] max-w-2xl bg-white   overflow-hidden relative mt-3"
         // Optional: Pause the timer when the user hovers over the container
         onMouseEnter={() => clearInterval(timerRef.current)}
         onMouseLeave={restartTimer}
@@ -91,7 +91,7 @@ const AutoImageSwiper = ({ images }) => {
           style={{ width: `${totalSlides * 100}%` }}
         >
           {images.map((image, index) => (
-            <div key={index} className="w-full swiper-slide h-96" style={{ width: `${100 / totalSlides}%` }}>
+            <div key={index} className="w-full swiper-slide h-100 border rounded-md overflow-hidden" style={{ width: `${100 / totalSlides}%` }}>
               <img 
                 src={image.src}
                 alt={image.alt} 

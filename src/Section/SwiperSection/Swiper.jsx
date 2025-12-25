@@ -12,16 +12,16 @@ function Swiper() {
   const [state, setSate] = useState(false);
   return (
     <>
-      <div className="flex gap-4 shadow-md w-full">
+      <div className="flex gap-5  w-full rounded-md overflow-hidden">
         
         <AutoImageSwiper images={images}/>
-        <div className="w-1/2  mt-5  flex flex-col items-start">
-          <h1 className=" text-2xl font-bold"> Faculty of Education</h1>
-          <div className=" flex flex-col items-start">
+        <div className="w-2/3  mt-5  flex flex-col items-start border rounded-lg transition-transform duration-1000">
+          <h1 className=" text-2xl font-bold ms-5 "> Faculty of Education</h1>
+          <div className=" flex flex-col items-start ">
             <p
               className={`${
                 state ? "max-h-[2000px] opacity-100 " : "max-h-31 opacity-70"
-              } overflow-hidden text-justify duration-500 transition-all ease-in-out`}
+              } overflow-hidden text-justify duration-500 transition-all ease-in-out ms-5 me-5`}
             >
               {" "}
               The Faculty of Education (FoEd) stands as a beacon of academic
@@ -58,7 +58,7 @@ function Swiper() {
             </p>
             <button
               onClick={() => setSate(!state)}
-              className="relative mt-2 mb-2 overflow-hidden w-32 h-10 hover:text-white text-black font-medium text-lg border-2 border-black rounded-lg cursor-pointer transition-colors duration-500 group"
+              className="relative mt-2 ms-5 mb-2 overflow-hidden w-32 h-10 hover:text-white text-black font-medium text-lg border-2 border-black rounded-lg cursor-pointer transition-colors duration-500 group"
             >
               {state ? "View Less" : "View More"}
               <span className="absolute top-full left-full w-48 h-48 bg-[#3396D3] rounded-full transition-all duration-700 group-active:bg-purple-900 group-hover:-top-7 group-hover:-left-7 -z-10"></span>
@@ -70,10 +70,10 @@ function Swiper() {
               {state ? "View More " : " View Less"}
             </button> */}
           </div>
-          <h1 className=" text-2xl font-bold"> FoE’s Educational Philosophy</h1>
+          <h1 className=" text-2xl font-bold ms-5"> FoE’s Educational Philosophy</h1>
           <div className=" flex flex-col items-start">
             <p
-              className={`overflow-hidden text-justify duration-500 transition-all ease-in-out`}
+              className={`overflow-hidden text-justify duration-500 transition-all ease-in-out ms-5 me-5`}
             >
               The Educational Philosophy of the Faculty of Education focuses on
               developing human capital through best practices across all

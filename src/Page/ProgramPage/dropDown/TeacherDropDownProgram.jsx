@@ -73,19 +73,16 @@ function TeacherDropDownProgram({ handleTeacherDropDown, setHandleTeacherDropDow
               (selectedProgram==="Primary Education Program")?
               "This For Teacher program":"This For Teacher program"}
               
-              {/* {selectedCredit === "4 Credit" && <DetailFourCredit />} */}
-              {/* {selectedCredit === "15 Credit" && <Detail15Credit />} */}
-              {/* {selectedCredit === "36 Credit" && <Detail36Credit/>} */}
               
             </div>
 
             <div className=" w-full justify-end flex p-4 gap-4 h-1/10 mt-4">
-              <button onClick={scrollToTop} className=" text-white bg-[#3396D3] px-3 py-2">
+              <button onClick={scrollToTop} className=" text-white bg-[#3396D3] px-3 py-2 rounded-md">
                 <i className="fa-solid fa-angle-up"></i>To Top 
               </button>
               <button
                 onClick={() => setHandleTeacherDropDown(!handleTeacherDropDown)}
-                className="  text-white bg-red-500 px-3 py-2"
+                className="  text-white bg-red-500 px-3 py-2 rounded-md"
               >
                 {" "}
                 Close{" "}

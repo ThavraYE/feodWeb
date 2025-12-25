@@ -50,7 +50,7 @@ const handleViewMore = (news) => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6  ">
             {images.map((item,index)=>(
               (index==0) ?
-              <div onClick={()=>handleViewMore(item)} className=" lg:col-span-2 group relative overflow-hidden shadow-xl rounded-xl h-[500px] ms-6">
+              <div onClick={()=>handleViewMore(item)} className=" lg:col-span-2 group relative overflow-hidden shadow-sm rounded-xl h-[500px] ms-6 duration-600 hover:shadow-xl/30">
                 <img  src={item.src}
                      alt="Green Energy" 
                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>

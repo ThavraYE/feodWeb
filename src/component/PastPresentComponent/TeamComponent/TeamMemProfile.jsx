@@ -1,7 +1,7 @@
 
 function TeamMemProfile({ name, memDetail, duty, onViewMore }) {
   return (
-    <div className="w-80 bg-white rounded-lg shadow-xl overflow-hidden text-center hover:shadow-2xl transition-shadow duration-300">
+    <div className="w-80 bg-white hover:border rounded-lg shadow-xl overflow-hidden text-center hover:shadow-2xl transition-shadow duration-300">
       <img
         src="https://t4.ftcdn.net/jpg/15/98/56/23/360_F_1598562310_PBaNmPaPyc1TgWjOp3iYMp4mIf8lfQ6n.jpg"
         alt={name}

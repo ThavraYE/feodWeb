@@ -62,12 +62,12 @@ function DropDownBaProgram({ handleDropDownBa, setHandleDropDownBa,selectedProgr
             </div>
 
             <div className=" w-full justify-end flex p-4 gap-4 h-1/10 mt-4">
-              <button onClick={scrollToTop} className=" text-white bg-[#3396D3] px-3 py-2">
+              <button onClick={scrollToTop} className=" text-white bg-[#3396D3] px-3 py-2 rounded-md">
                 <i className="fa-solid fa-angle-up"></i>To Top 
               </button>
               <button
                 onClick={() => setHandleDropDownBa(!handleDropDownBa)}
-                className="  text-white bg-red-500 px-3 py-2"
+                className="  text-white bg-red-500 px-3 py-2 rounded-md"
               >
                 {" "}
                 Close{" "}

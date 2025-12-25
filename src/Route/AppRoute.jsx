@@ -5,6 +5,8 @@ import Home from "../Page/HomePage/Home";
 import AboutUsPage from "../Page/AboutUsPage/AboutUsPage";
 import ProgramPage from "../Page/ProgramPage/ProgramPage";
 import AllDetailMem from "../Page/PastAndPrensentPage/AllDetailMem";
+import MainPastPresent from "../Section/PastPresentSection/MainPastPresent";
+import InterNation from "../Section/PastPresentSection/InterNation";
 const appRoute = createBrowserRouter([
   {
     path: "/",
@@ -34,6 +36,15 @@ const appRoute = createBrowserRouter([
         path: "our-management/all-detail-member",
         element:<AllDetailMem/>,
       },
+      {
+        path: "project/national",
+        element:<MainPastPresent/>,
+      },
+      {
+        path: "project/international",
+        element:<InterNation/>,
+      },
+      
     ],
   },
 ]);
