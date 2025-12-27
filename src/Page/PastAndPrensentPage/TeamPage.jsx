@@ -8,8 +8,8 @@ function TeamPage() {
 
   const memberProfile = [
     {
-      name: "Kok Lola",
-      image:"https://i.pinimg.com/736x/15/0f/a8/150fa8800b0a0d5633abc1d1c4db3d87.jpg",
+      name: "Prof. Dr. Tao Nary ",
+      image:"https://rupp.edu.kh/fed/images/staff/tao-nary.png",
       contect:
       [
         "012345678",
@@ -68,8 +68,8 @@ function TeamPage() {
       ]
     },
     {
-      name: "Kok Kaka",
-      image:"https://i.pinimg.com/736x/15/0f/a8/150fa8800b0a0d5633abc1d1c4db3d87.jpg",
+      name: "Sot Visal",
+      image:"https://rupp.edu.kh/fed/images/staff/sot-visal.png",
       contect:
       [
         "012345678",
@@ -128,8 +128,8 @@ function TeamPage() {
       ]
     },
     {
-      name: "Kok Bopha",
-      image:"https://i.pinimg.com/736x/15/0f/a8/150fa8800b0a0d5633abc1d1c4db3d87.jpg",
+      name: "Haing Sivpheng",
+      image:"https://rupp.edu.kh/fed/images/staff/haing-sivpheng.jpg",
       contect:
         [
         "012345678",
@@ -188,8 +188,8 @@ function TeamPage() {
       ]
     },
     {
-      name: "Kok Tola",
-      image:"https://i.pinimg.com/736x/15/0f/a8/150fa8800b0a0d5633abc1d1c4db3d87.jpg",
+      name: "Hor Youhan",
+      image:"https://rupp.edu.kh/fed/images/staff/hor-youhan.png",
       contect:
       [
         "012345678",
@@ -246,7 +246,247 @@ function TeamPage() {
           titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
         },
       ]
-    }
+    },
+    {
+      name: "Dr. Moeurn Chantrea",
+      image:"https://rupp.edu.kh/fed/images/staff/moeurn-chantrea.png",
+      contect:
+      [
+        "012345678",
+        "@gmail.com",
+        "HV9R+6RC, Russian Federation Blvd (110), Phnom Penh"
+        ],
+      memDetail: "Dedicated professional providing excellent support and maintaining high service standards.",
+      duty: "Attendant",
+      Memskill:
+      [
+        "Management Skills",
+        "Creativity",
+        "Digital Marketing",
+        "Negotiation",
+        "Critical Thinking",
+        "Leadership",
+      ],
+      memEducation:
+      [
+        {
+          degree:"Bacc",
+          dateGraduate:"2013-2019",
+          school:"MBR",
+          eduDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin in arcu."
+        },
+        {
+          degree:"Bachlor",
+          dateGraduate:"2020-2024",
+          school:"RUPP",
+          eduDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin in arcu."
+        }
+      ],
+      experience:
+      [
+        {
+          title: "Product Design Manager",
+          years: "2016 - 2020",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },{
+          title: "Risk Manager", 
+          years: "2019 - 2020",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },{
+          title: "Project Manager", 
+          years: "2017 - 2019",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },{
+          title: "Marketing Manager", 
+          years: "2016 - 2017",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },
+      ]
+    },
+    {
+      name: "Mrs. Svay Souma",
+      image:"https://rupp.edu.kh/fed/images/staff/svay-souma.png",
+      contect:
+      [
+        "012345678",
+        "@gmail.com",
+        "HV9R+6RC, Russian Federation Blvd (110), Phnom Penh"
+        ],
+      memDetail: "Dedicated professional providing excellent support and maintaining high service standards.",
+      duty: "Attendant",
+      Memskill:
+      [
+        "Management Skills",
+        "Creativity",
+        "Digital Marketing",
+        "Negotiation",
+        "Critical Thinking",
+        "Leadership",
+      ],
+      memEducation:
+      [
+        {
+          degree:"Bacc",
+          dateGraduate:"2013-2019",
+          school:"MBR",
+          eduDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin in arcu."
+        },
+        {
+          degree:"Bachlor",
+          dateGraduate:"2020-2024",
+          school:"RUPP",
+          eduDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin in arcu."
+        }
+      ],
+      experience:
+      [
+        {
+          title: "Product Design Manager",
+          years: "2016 - 2020",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },{
+          title: "Risk Manager", 
+          years: "2019 - 2020",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },{
+          title: "Project Manager", 
+          years: "2017 - 2019",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },{
+          title: "Marketing Manager", 
+          years: "2016 - 2017",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },
+      ]
+    },
+    {
+      name: "Ms. Leang Lengngich",
+      image:"https://rupp.edu.kh/fed/images/staff/leang-lengngich.png",
+      contect:
+      [
+        "012345678",
+        "@gmail.com",
+        "HV9R+6RC, Russian Federation Blvd (110), Phnom Penh"
+        ],
+      memDetail: "Dedicated professional providing excellent support and maintaining high service standards.",
+      duty: "Attendant",
+      Memskill:
+      [
+        "Management Skills",
+        "Creativity",
+        "Digital Marketing",
+        "Negotiation",
+        "Critical Thinking",
+        "Leadership",
+      ],
+      memEducation:
+      [
+        {
+          degree:"Bacc",
+          dateGraduate:"2013-2019",
+          school:"MBR",
+          eduDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin in arcu."
+        },
+        {
+          degree:"Bachlor",
+          dateGraduate:"2020-2024",
+          school:"RUPP",
+          eduDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin in arcu."
+        }
+      ],
+      experience:
+      [
+        {
+          title: "Product Design Manager",
+          years: "2016 - 2020",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },{
+          title: "Risk Manager", 
+          years: "2019 - 2020",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },{
+          title: "Project Manager", 
+          years: "2017 - 2019",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },{
+          title: "Marketing Manager", 
+          years: "2016 - 2017",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },
+      ]
+    },
+    {
+      name: "Mr. Heng Nareth",
+      image:"https://rupp.edu.kh/fed/images/staff/heng-nareth.png",
+      contect:
+      [
+        "012345678",
+        "@gmail.com",
+        "HV9R+6RC, Russian Federation Blvd (110), Phnom Penh"
+        ],
+      memDetail: "Dedicated professional providing excellent support and maintaining high service standards.",
+      duty: "Attendant",
+      Memskill:
+      [
+        "Management Skills",
+        "Creativity",
+        "Digital Marketing",
+        "Negotiation",
+        "Critical Thinking",
+        "Leadership",
+      ],
+      memEducation:
+      [
+        {
+          degree:"Bacc",
+          dateGraduate:"2013-2019",
+          school:"MBR",
+          eduDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin in arcu."
+        },
+        {
+          degree:"Bachlor",
+          dateGraduate:"2020-2024",
+          school:"RUPP",
+          eduDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin in arcu."
+        }
+      ],
+      experience:
+      [
+        {
+          title: "Product Design Manager",
+          years: "2016 - 2020",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },{
+          title: "Risk Manager", 
+          years: "2019 - 2020",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },{
+          title: "Project Manager", 
+          years: "2017 - 2019",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },{
+          title: "Marketing Manager", 
+          years: "2016 - 2017",
+          company:"Arowwai Industries",
+          titleDetail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque."
+        },
+      ]
+    },
   ];
 
   const handleViewMore = (member) => {
@@ -254,17 +494,55 @@ function TeamPage() {
     setDrop(true);
   };
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const visibleCount = 4;
+
+  // 3. Navigation Handlers
+  const handleForward = () => {
+    if (currentIndex + visibleCount < memberProfile.length) {
+      setCurrentIndex(prev => prev + 1);
+    } else {
+      setCurrentIndex(0);
+       // Optional: Loop to start
+    }
+  };
+
+  const handleBackward = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(prev => prev - 1);
+    } else {
+      setCurrentIndex(memberProfile.length - visibleCount); // Optional: Loop to end
+    }
+  };
+
+  // 4. Get the current "slice" of 4 visible cards
+  const visibleMembers = memberProfile.slice(currentIndex, currentIndex + visibleCount);
+
   return (
     <div className="  py-10">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-center gap-8 mt-3">
-          {memberProfile.map((item, index) => (
+        <div className="flex flex-wrap justify-center items-center gap-8 mt-3">
+          <button 
+          onClick={handleBackward}
+          className=" hover:bg-blue-600 hover:text-white text-blue-600 font-bold py-2 px-6 rounded-full shadow-lg transition-transform active:scale-95 h-10.25"
+        >
+          &larr;
+        </button>
+          {visibleMembers.map((item, index) => (
             <TeamMemProfile
               key={index}
               {...item}
               onViewMore={() => handleViewMore(item)}
             />
           ))}
+
+          <button 
+          onClick={handleForward}
+          className="hover:bg-blue-600 hover:text-white text-blue-600 font-bold py-2 px-6 rounded-full shadow-lg transition-transform active:scale-95 h-10.25"
+        >
+          &rarr;
+        </button>
+
         </div>
       </div>
 

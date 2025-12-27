@@ -1,4 +1,5 @@
 import image from '../../assets/image/swipperImg2_1.jpg'
+import { Link } from 'react-router-dom'
 function HeipPastPresent (){
     return(
         <>
@@ -9,6 +10,7 @@ function HeipPastPresent (){
                 </div>
             </div>
             <div className="mt-5 grid grid-cols-2" >
+                <Link to="">
                 <div className="col " >
                     <div className="MainDetail w-[98%] ms-[3px]">
                      <div className="h-[150px] radius-10px overflow-hidden">
@@ -22,6 +24,8 @@ function HeipPastPresent (){
                     </div>
                     </div>
                 </div>
+                </Link>
+                <Link to="">
                 <div className="col ">
                     <div className="MainDetail w-[98%] ms-[3px]">
                      <div className=" h-[150px] radius-10px overflow-hidden">
@@ -35,6 +39,7 @@ function HeipPastPresent (){
                     </div>
                     </div>
                 </div>
+                </Link>
             </div>
         </div>
         </>

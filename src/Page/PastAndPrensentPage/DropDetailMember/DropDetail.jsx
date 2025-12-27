@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import AllDetailMem from "../AllDetailMem";
 
-function DropDetail({ drop, setDrop, selectedMember }) {
+export default function DropDetail({ drop, setDrop, selectedMember }) {
   const [heightDropDown, setHeightDropDown] = useState(0);
   const bodyDropDown = useRef(null);
 
@@ -51,4 +51,3 @@ function DropDetail({ drop, setDrop, selectedMember }) {
   );
 }
 
-export default DropDetail;

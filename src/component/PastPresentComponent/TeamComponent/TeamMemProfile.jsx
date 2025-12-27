@@ -1,11 +1,11 @@
 
-function TeamMemProfile({ name, memDetail, duty, onViewMore }) {
+function TeamMemProfile({ name,image, memDetail, duty, onViewMore }) {
   return (
-    <div className="w-80 bg-white hover:border rounded-lg shadow-xl overflow-hidden text-center hover:shadow-2xl transition-shadow duration-300">
+    <div className="w-75 bg-white hover:border rounded-lg shadow-xl overflow-hidden text-center hover:shadow-2xl transition-shadow duration-300">
       <img
-        src="https://t4.ftcdn.net/jpg/15/98/56/23/360_F_1598562310_PBaNmPaPyc1TgWjOp3iYMp4mIf8lfQ6n.jpg"
+        src={image}
         alt={name}
-        className="w-full h-64 object-cover"
+        className="w-full h-64 object-contain"
       />
 
       <div className="px-6 py-5">
@@ -13,7 +13,7 @@ function TeamMemProfile({ name, memDetail, duty, onViewMore }) {
           {name}
         </h2>
 
-        <p className="text-gray-600 text-base mt-2 mb-4">
+        <p className="text-gray-600 text-base mt-2 mb-4 h-17.5 overflow-hidden">
           {memDetail}
         </p>
 

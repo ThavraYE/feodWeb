@@ -4,7 +4,7 @@ function Dean(){
         <>
             
                 <div className="grid grid-cols-3"> 
-                    <div className="col-span-2 ms-7 mt-[30px] rounded-md shadow-xl border">
+                    <div className="col-span-2 ms-7 mt-[30px] rounded-md shadow-xl ">
                         <div className="profileDetail ms-[15px]">
                             <h1 className="pt-serif-bold text-right me-10"> Prof. Dr. Sok Soth</h1>
                             <p className="pt-serif-regular text-right me-10">
@@ -19,7 +19,7 @@ function Dean(){
                         </div>
                     </div>
                     <div className="ms-7 mt-[30px] ">
-                        <div className="profile rounded-md overflow-hidden shadow-xl w-[450px] h-[250px] border">
+                        <div className="profile rounded-md overflow-hidden shadow-xl w-[450px] h-[250px] ">
                             <img src={DeanImage} alt="" />
                         </div>
                         

@@ -87,11 +87,11 @@ const AutoImageSwiper = ({ images }) => {
         <div 
           id="swiper-track" 
           ref={trackRef}
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex shadow-md hover:shadow-2xl transition-transform duration-500 ease-in-out"
           style={{ width: `${totalSlides * 100}%` }}
         >
           {images.map((image, index) => (
-            <div key={index} className="w-full swiper-slide h-100 border rounded-md overflow-hidden" style={{ width: `${100 / totalSlides}%` }}>
+            <div key={index} className="w-full swiper-slide h-100  rounded-md overflow-hidden" style={{ width: `${100 / totalSlides}%` }}>
               <img 
                 src={image.src}
                 alt={image.alt} 

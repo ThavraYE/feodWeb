@@ -12,10 +12,10 @@ function Swiper() {
   const [state, setSate] = useState(false);
   return (
     <>
-      <div className="flex gap-5  w-full rounded-md overflow-hidden">
+      <div className="flex gap-5  w-full rounded-md ">
         
         <AutoImageSwiper images={images}/>
-        <div className="w-2/3  mt-5  flex flex-col items-start border rounded-lg transition-transform duration-1000">
+        <div className="w-2/3  mt-5  flex flex-col items-start shadow-md hover:shadow-2xl  rounded-lg transition-transform duration-6000">
           <h1 className=" text-2xl font-bold ms-5 "> Faculty of Education</h1>
           <div className=" flex flex-col items-start ">
             <p
