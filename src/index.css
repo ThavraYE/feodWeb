@@ -104,7 +104,7 @@
     display: none;
     top: 60px;
     left: 0px;
-    background-color:#3396D3;
+    background-color:#1C4D8D;
     position: absolute;
     z-index: 9999;
     /* width: 250px; */
@@ -132,7 +132,7 @@ li:hover + .dropdown-content{
     display: flex;
 }
 .sub-dropdown-content{
-    background-color: #3396D3;
+    background-color: #1C4D8D;
     position: absolute;
     display: none;
     border-radius: 5px;
@@ -141,7 +141,7 @@ li:hover + .dropdown-content{
 .sub-dropdown{
     position: absolute;
     display: none;
-    background-color: #3396D3;
+    background-color: #1C4D8D;
 }
 .dropdown-content .p_10px_20px_10px_0px:hover + .sub-dropdown-content{
     display: block;

@@ -6,7 +6,7 @@ import { FaYoutube } from "react-icons/fa";
 function FooterWeb(){
     return(
         <>
-        <div className="footer w-full h-[400px] bg-[#3396D3] mt-5 grid grid-cols-3 gap-4 ">
+        <div className="footer w-full h-[400px] bg-[#1C4D8D] mt-5 grid grid-cols-3 gap-4 ">
             <div className="contectUs mt-[30px] ms-[60px] text-start">
                 <h1 className="pt-serif-bold text-2xl text-[#FFFFFF]">Contact us</h1>
                 <span className="google-sans-flex mt-5 text-[#FFFFFF]">Get in touch for enquiries, feedback, complaints and compliments.</span>

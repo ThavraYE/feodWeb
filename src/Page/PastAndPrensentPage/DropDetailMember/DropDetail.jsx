@@ -5,6 +5,7 @@ import AllDetailMem from "../AllDetailMem";
 export default function DropDetail({ drop, setDrop, selectedMember }) {
   const [heightDropDown, setHeightDropDown] = useState(0);
   const bodyDropDown = useRef(null);
+  const containRef = useRef(null);
 
   useEffect(() => {
     if (drop && bodyDropDown.current) {
@@ -14,19 +15,23 @@ export default function DropDetail({ drop, setDrop, selectedMember }) {
       setHeightDropDown(0);
     }
   }, [drop, selectedMember]);
-
+  
   function scrollToTop() {
+    if(containRef.current){
+       containRef.current.scrollTo({ top: 0, behavior: "smooth" });
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   if (!drop) return null;
 
   return (
-    <section
+    <section 
+      ref={containRef}
       className="fixed top-0 left-0 w-full bg-white shadow-2xl z-50 transition-all duration-700 ease-in-out overflow-y-auto"
       style={{ height: heightDropDown > 0 ? `${heightDropDown}px` : '0px', maxHeight: '100vh' }}
     >
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-full" id="dropDetail">
         <div ref={bodyDropDown} className="w-full h-fit pt-8">
           <AllDetailMem selectedMember={selectedMember} />
           <div className="w-full justify-end flex p-4 gap-4 mt-4">

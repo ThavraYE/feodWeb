@@ -46,7 +46,7 @@ const appRoute = createBrowserRouter([
         element:<InternationalPage/>,
       },
       {
-        path: "project/national/ece",
+        path: "project/national/:subProjectId",
         element:<ProjectTeam />,
       },
       
