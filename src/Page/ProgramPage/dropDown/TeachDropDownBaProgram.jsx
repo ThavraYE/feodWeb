@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import TeachEceBaDetail from "../../../Section/ProgramSection/ECEBA/TeachEceBaDetail"
+import TupSeBaProgram from "../../../Section/ProgramSection/SE/TUP/TupSeBaProgram";
+import { BATUP_DATA } from "../../../Utils/Utils";
 
 // function TeachDropDownBaProgram({ handleTeacherDropDownBa, setHandleTeacherDropDownBa,selectedProgram}) {
 //   const [heightDropDown, setHeightDropDown] = useState(0);
@@ -104,17 +106,19 @@ export default function TeacherDropDownBaProgram({
 }) {
   const containRef = useRef(null);
   const [selectedCredit, setSelectedCredit] = useState("63 Credit");
+  const [selectedMainSubject, setSelectedMainSubject] = useState("អក្សរសាស្ត្រខ្មែរ");
 
   // Reset to 4 Credit every time dropdown opens
   useEffect(() => {
     if (isOpen) {
       setSelectedCredit("63 Credit");
+      setSelectedMainSubject("អក្សរសាស្ត្រខ្មែរ");
     }
   }, [isOpen]);
 
   if (!isOpen) return null;
 
-  const isEarlyChildhood = selectedProgram === "Early Childhood Education Program";
+  // const isEarlyChildhood = selectedProgram === "Early Childhood Education Program";
 
   return (
     <div 
@@ -137,7 +141,7 @@ export default function TeacherDropDownBaProgram({
           </div>
           <button
             onClick={() => setIsOpen(false)}
-            className="px-5 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md transition"
+            className="px-5 py-2 bg-red-500 hover:cursor-pointer hover:bg-red-600 text-white rounded-md transition"
           >
             Close
           </button>
@@ -145,7 +149,7 @@ export default function TeacherDropDownBaProgram({
 
         <div className="p-6 md:p-8">
           {/* Credit tabs - only for Early Childhood */}
-          {isEarlyChildhood && (
+          {
             <div className="flex flex-wrap gap-3 mb-8 border-b pb-3">
               {["63 Credit"].map(credit => (
                 <button
@@ -162,28 +166,54 @@ export default function TeacherDropDownBaProgram({
                 </button>
               ))}
             </div>
-          )}
+          }
 
-          {/* Content */}
-          {isEarlyChildhood ? (
+          {
+            (selectedProgram==="Early Childhood Education Program")?
+            (
             <>
-              {selectedCredit === "63 Credit" }
+              {selectedCredit === "63 Credit" && "Content for "+selectedProgram+" Program (coming soon)" }
              
-            </>
-          ) : (
-            <div className="py-12 text-center text-gray-600 text-lg">
-              {selectedProgram === "Primary Education Program"
-                ? "Content for Primary Education Certificate Program (coming soon)"
-                : "Content for Secondary Education Certificate Program (coming soon)"}
-            </div>
-          )}
+            </>):((selectedProgram==="Primary Education Program")?
+                  (
+                   <>
+                    {selectedCredit === "63 Credit" && "Content for "+selectedProgram+" Program (coming soon)" }
+                  </> 
+                  ):(
+                      <div className="flex flex-wrap gap-3 mb-8 border-b pb-3">
+                        {["អក្សរសាស្ត្រខ្មែរ","គណិតវិទ្យា","រូបវិទ្យា","គីមី","ជីវវិទ្យា","ប្រវត្តិវិទ្យា"].map(mainSubject => (
+                        <button
+                        key={mainSubject}
+                        onClick={() => setSelectedMainSubject(mainSubject)}
+                        className={`
+                          px-5 py-2 rounded-full font-medium transition hover:cursor-pointer
+                          ${selectedMainSubject === mainSubject 
+                          ? "bg-[#1C4D8D] text-white shadow-md " 
+                          : "bg-gray-100 text-gray-700 hover:bg-gray-200"}
+                        `}
+                        >
+                          {mainSubject}
+                        </button>
+                      ))}
+                      </div>
+                       
+                  )
+            )
+          }
+          {
+            (selectedProgram==="Secondary Education Program")?
+            (<TupSeBaProgram
+                selectedSubject={selectedMainSubject}
+              />):""
+          }
+
         </div>
 
         {/* Footer with scroll to top */}
         <div className="sticky bottom-0 bg-white border-t px-8 py-4 flex justify-end">
           <button
             onClick={() => containRef.current.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2 px-5 py-2 bg-[#1C4D8D] hover:bg-blue-600 text-white rounded-md transition"
+            className="flex items-center hover:cursor-pointer gap-2 px-5 py-2 bg-[#1C4D8D] hover:bg-blue-600 text-white rounded-md transition"
           >
             <span>↑</span> Back to Top
           </button>

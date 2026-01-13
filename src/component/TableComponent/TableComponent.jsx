@@ -170,9 +170,9 @@ export default function TableComponent({
     }));
 
     // Optional: scroll to top except for certificate
-    if (level !== "certificate") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    // if (level !== "certificate") {
+    //   window.scrollTo({ top: 0, behavior: "smooth" });
+    // }
   };
 
   return (

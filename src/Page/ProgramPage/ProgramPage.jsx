@@ -1,6 +1,7 @@
 import imageRupp from "../../assets/image/image.png";
 import React, { useEffect, useRef } from "react";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import DropDownProgram from "../../Page/ProgramPage/dropDown/DropDownProgram";
 import DropDownBaProgram from "../../Page/ProgramPage/dropDown/DropDownBaProgram";
 import TableComponent from "../../component/TableComponent/TableComponent";
@@ -276,11 +277,13 @@ export default function ProgramPage() {
   };
 
   // Auto scroll to top when opening certificate dropdown (optional)
+  const { pathname } = useLocation();
   useEffect(() => {
     if (dropdownStates.certificate) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }, [dropdownStates.certificate]);
+    window.scrollTo({top:0,behavior:"smooth"})
+  }, [dropdownStates.certificate],[pathname]);
 
   return (
     <section className="w-full relative">

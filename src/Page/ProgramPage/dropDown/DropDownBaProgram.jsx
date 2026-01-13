@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import LupEceBaProgram from "../../../Section/ProgramSection/ECEBA/LupEceBaProgram"
+import LupSeBaProgram from "../../../Section/ProgramSection/SE/LUP/LupSeBaProgram";
 
 // function DropDownBaProgram({ handleDropDownBa, setHandleDropDownBa,selectedProgram}) {
 //   const [heightDropDown, setHeightDropDown] = useState(0);
@@ -100,7 +101,7 @@ export default function DropDownBaProgram({
 
   if (!isOpen) return null;
 
-  const isEarlyChildhood = selectedProgram === "Early Childhood Education Program";
+  const isEarlyChildhood = selectedProgram ;
 
   return (
     <div 
@@ -123,7 +124,7 @@ export default function DropDownBaProgram({
           </div>
           <button
             onClick={() => setIsOpen(false)}
-            className="px-5 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md transition"
+            className="px-5 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md transition hover:cursor-pointer"
           >
             Close
           </button>
@@ -151,24 +152,24 @@ export default function DropDownBaProgram({
           )}
 
           {/* Content */}
-          {isEarlyChildhood ? (
+          {(selectedProgram === "Early Childhood Education Program") ? (
             <>
               {selectedCredit === "63 Credit" && <LupEceBaProgram />}
             </>
           ) : (
-            <div className="py-12 text-center text-gray-600 text-lg">
-              {selectedProgram === "Primary Education Program"
+            
+              selectedProgram === "Primary Education Program"
                 ? "Content for Primary Education Certificate Program (coming soon)"
-                : "Content for Secondary Education Certificate Program (coming soon)"}
-            </div>
+                : <LupSeBaProgram/>
+           
           )}
         </div>
 
         {/* Footer with scroll to top */}
-        <div className="sticky bottom-0 bg-white border-t px-8 py-4 flex justify-end">
+        <div className="sticky bottom-0 bg-white border-t px-8 py-4 flex justify-end ">
           <button
             onClick={() => containRef.current.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2 px-5 py-2 bg-[#1C4D8D] hover:bg-blue-600 text-white rounded-md transition"
+            className="flex items-center hover:cursor-pointer gap-2 px-5 py-2 bg-[#1C4D8D] hover:bg-blue-600 text-white rounded-md transition"
           >
             <span>↑</span> Back to Top
           </button>
