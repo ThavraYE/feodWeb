@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import LupEceMaProgram from "../../../Section/ProgramSection/ECEMaster/LupEceMaProgram"
+import LupSeMaProgram from "../../../Section/ProgramSection/SE/LUP/LupSeMaProgram";
 
 // function DropDownMaProgram({ handleDropDownMa, setHandleDropDownMa,selectedProgram }) {
 //   const [heightDropDown, setHeightDropDown] = useState(0);
@@ -95,7 +96,7 @@ export default function DropDownMaProgram({
 
   if (!isOpen) return null;
 
-  const isEarlyChildhood = selectedProgram === "Early Childhood Education Program";
+  const isEarlyChildhood = selectedProgram ;
 
   return (
     <div 
@@ -126,7 +127,7 @@ export default function DropDownMaProgram({
 
         <div className="p-6 md:p-8">
           {/* Credit tabs - only for Early Childhood */}
-          {isEarlyChildhood && (
+          { (
             <div className="flex flex-wrap gap-3 mb-8 border-b pb-3">
               {["63 Credit"].map(credit => (
                 <button
@@ -154,7 +155,7 @@ export default function DropDownMaProgram({
             <div className="py-12 text-center text-gray-600 text-lg">
               {selectedProgram === "Primary Education Program"
                 ? "Content for Primary Education Certificate Program (coming soon)"
-                : "Content for Secondary Education Certificate Program (coming soon)"}
+                : <LupSeMaProgram/>}
             </div>
           )}
         </div>
