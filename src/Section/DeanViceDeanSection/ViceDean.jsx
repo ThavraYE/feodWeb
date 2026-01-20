@@ -2,18 +2,18 @@ import viceDeanIamge from "../../assets/image/vicedean.png";
 function ViceDean() {
   return (
     <>
-      <div className="grid grid-cols-3 w-full">
-        <div className="mt-5">
-          <div className="profile ms-7   rounded-md overflow-hidden shadow-xl w-[450px] h-[250px]">
-            <img src={viceDeanIamge} alt="" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 items-center mt-10">
+        <div className="flex justify-center ms-4  mt-2">
+          <div className="profile rounded-xl  overflow-hidden shadow-xl w-full max-w-[450px] aspect-4/3 md:aspect-auto md:h-full transition-transform duration-300 hover:scale-[1.02]">
+            <img src={viceDeanIamge} alt="" className="w-full h-full object-cover"/>
           </div>
         </div>
-        <div className="col-span-2 mt-5 shadow-xl me-5 rounded-md ">
+        <div className="md:col-span-2 bg-white rounded-xl shadow-xl p-6 md:p-8 lg:p-10 transition-all duration-300 hover:shadow-2xl ">
           <div className="profileDetail ms-5">
-            <h1 className="pt-serif-bold text-start">
+            <h1 className="pt-serif-bold text-2xl md:text-3xl lg:text-4xl  mb-4 text-center md:text-left border-b-2 border-blue-100 pb-2 inline-block md:block w-full">
                 Associate Prof. Dr.Mam Socheath
               </h1>
-            <p className="pt-serif-regular text-start">
+            <p className="pt-serif-regular text-sm md:text-base lg:text-lg leading-relaxed text-justify md:text-left">
               has worked in the field of education since 2005 through secondary
               education level as a teacher of English and tertiary education
               level as a lecturer and researcher. He graduated his Ph.D. in
