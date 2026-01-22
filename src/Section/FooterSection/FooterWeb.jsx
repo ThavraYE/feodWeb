@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import React from 'react';
 import ruppLogo from '../../assets/image/RUPP_Logo_No_bg.png'
-import logoMoeY from '../../assets/image/logoMoeY.webp'
+import logoMoeY from '../../assets/image/LogoMoeY_removebg.png'
 import { FaFacebook, FaYoutube, FaApple, FaGooglePlay } from "react-icons/fa";
 // import { FaFacebook } from "react-icons/fa";
 // import { FaYoutube } from "react-icons/fa";
