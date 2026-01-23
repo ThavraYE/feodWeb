@@ -8,6 +8,7 @@ import AllDetailMem from "../Page/PastAndPrensentPage/AllDetailMem";
 import MainPastPresent from "../Section/PastPresentSection/MainPastPresent";
 import InternationalPage from "../Page/AboutUsPage/InternationalPage";
 import ProjectTeam from "../Page/AboutUsPage/ProjectTeam";
+import FacultyPage from "../Page/ProgramPage/FacutlyPage";
 const appRoute = createBrowserRouter([
   {
     path: "/",
@@ -48,6 +49,10 @@ const appRoute = createBrowserRouter([
       {
         path: "project/national/:subProjectId",
         element:<ProjectTeam />,
+      },
+      {
+        path: "/aboutUs/about-faculty",
+        element:<FacultyPage />,
       },
       
     ],

@@ -20,7 +20,7 @@ export default function DropDownProgram({
 
   if (!isOpen) return null;
 
-  const isEarlyChildhood = selectedProgram === "Early Childhood Education Program";
+  const isEarlyChildhood = selectedProgram ;
 
   return (
     <div 
@@ -71,11 +71,12 @@ export default function DropDownProgram({
           )}
 
           {/* Content */}
-          {isEarlyChildhood ? (
+          {selectedProgram==="Early Childhood Education Program" ? (
             <>
-              {selectedCredit === "4 Credit" && <DetailFourCredit />}
-              {selectedCredit === "15 Credit" && <Detail15Credit />}
-              {selectedCredit === "36 Credit" && <Detail36Credit />}
+              {/* {selectedCredit === "4 Credit" && <DetailFourCredit selectedCredit={selectedCredit}/>} */}
+              {<DetailFourCredit selectedMainCredit={selectedCredit}/>}
+              {/* {selectedCredit === "15 Credit" && <Detail15Credit />}
+              {selectedCredit === "36 Credit" && <Detail36Credit />} */}
             </>
           ) : (
             <div className="py-12 text-center text-gray-600 text-lg">

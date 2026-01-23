@@ -1,4 +1,4 @@
-
+import { SectionID } from './types.js';
 
 export const NAVIGATION_DATA = [
   { label: 'Home', path: '/' },
@@ -8,7 +8,7 @@ export const NAVIGATION_DATA = [
     children: [
       {
         label: 'About Faculty of Education',
-        path: '#about-faculty',
+        path: '/aboutUs/about-faculty',
         children: [
           { label: 'Vision', path: '#vision' },
           { label: 'Mission', path: '#mission' },
@@ -148,4 +148,33 @@ export const NAVIGATION_DATA = [
       { label: 'EdTech Coordinator', path: '#edtech-coordinator' },
     ],
   },
+];
+
+export const PROGRAM_SECTIONS = [
+  { id: SectionID.VISION, title: 'Vision' },
+  { id: SectionID.MISSION, title: 'Mission' },
+  { id: SectionID.BACKGROUND, title: 'Program Background/Profile' },
+  { id: SectionID.NEEDS, title: 'Program Needs' },
+  { id: SectionID.PHILOSOPHY, title: 'Education Philosophy' },
+  { id: SectionID.ATTRIBUTES, title: 'Graduate Attributes' },
+  { id: SectionID.PEOS, title: 'PEOs' },
+  { id: SectionID.PLOS, title: 'PLOs' },
+  { id: SectionID.DESCRIPTION, title: 'Program Description & Delivery' },
+  { id: SectionID.BENCHMARKING, title: 'Benchmarking & Accreditation' },
+  { id: SectionID.STRUCTURE, title: 'Program Structure' },
+  { id: SectionID.TL_PRINCIPLES, title: 'Teaching & Learning Methods' },
+  { id: SectionID.ASSESSMENT_PRINCIPLES, title: 'Assessment Methods' },
+  { id: SectionID.GRADUATE_PROFILE, title: 'Graduate Profile' },
+  { id: SectionID.ADMISSION, title: 'Admission Criteria' },
+  { id: SectionID.DURATION, title: 'Program Duration' },
+  { id: SectionID.REQUIREMENTS, title: 'Graduate Requirement' },
+  { id: SectionID.CAREER, title: 'Career Pathway' },
+  { id: SectionID.RESEARCH, title: 'Action Research & Reform' },
+  { id: SectionID.STAFF, title: 'Profile of Academic Staff' },
+  { id: SectionID.FACILITIES, title: 'Facilities & Support Services' },
+  { id: SectionID.RESOURCES, title: 'Material and Resources' },
+  { id: SectionID.QA, title: 'Quality Assurance' },
+  { id: SectionID.ALUMNI, title: 'Our Alumni' },
+  { id: SectionID.FAQ, title: 'FAQ' },
+  { id: SectionID.ABOUT, title: 'About Us' },
 ];

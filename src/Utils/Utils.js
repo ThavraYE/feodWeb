@@ -1,4 +1,4 @@
-
+import { PROGRAM_SECTIONS } from "./constants";
 export const HeaderText = (headerText) => {
     return (headerText);
 };
@@ -1764,4 +1764,12 @@ export const ECE_DATA=[
       },
     ],
   },
+]
+
+export const FOED_DATA=[
+  {
+    id:"f01",
+    title:"Vision",
+    detail:"To be Cambodia’s flagship university with regional standing in teaching and learning, research and innovation, and social engagement by 2030.",
+  }
 ]

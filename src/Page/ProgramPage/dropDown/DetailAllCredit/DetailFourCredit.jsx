@@ -99,12 +99,26 @@ import {
   Calendar,
   Clock
 } from 'lucide-react';
+import { ECE_DATA } from '../../../../Utils/Utils';
 
-const DetailFourCredit = () => {
+const DetailFourCredit = ({selectedMainCredit}) => {
+  const filteredData = ECE_DATA.filter(
+      item => item.mainCredit === selectedMainCredit
+    );
+  
+    // If no data found (safety)
+    if (filteredData.length === 0) {
+      return (
+        <div className="py-12 text-center text-gray-600 text-lg">
+          មិនទាន់មានទិន្នន័យសម្រាប់ {selectedMainCredit} នៅឡើយទេ...
+        </div>
+      );
+    }
   return (
+    
     <div className="min-h-screen bg-[#fcfcfd] selection:bg-blue-100 selection:text-blue-900">
-      <main className="max-w-7xl mx-auto pb-24">
-
+      {filteredData.map((eceData,index)=>(
+        <main className="max-w-7xl mx-auto pb-24" key={index}>
         <section className="relative px-0 md:px-4 lg:px-8 pt-0 md:pt-6">
           <div className="relative w-full aspect-4/3 md:aspect-16/7 lg:aspect-21/8 overflow-hidden md:rounded-3xl shadow-2xl">
             <img 
@@ -152,7 +166,7 @@ const DetailFourCredit = () => {
                     <Layout className="w-6 h-6" /> ការណែនាំអំពីកម្មវិធី
                   </h4>
                   <p className="text-slate-600 leading-loose text-justify text-lg md:text-xl font-medium">
-                    កម្មវិធីវិញ្ញាបនបត្រនេះត្រូវបានរៀបចំឡើងដើម្បីត្រៀមលក្ខណៈអ្នកអប់រំកុមារតូច
+                    {/* កម្មវិធីវិញ្ញាបនបត្រនេះត្រូវបានរៀបចំឡើងដើម្បីត្រៀមលក្ខណៈអ្នកអប់រំកុមារតូច
                     និងគណៈគ្រប់គ្រងសាលារៀនឱ្យក្លាយជាភ្នាក់ងារកំណែទម្រង់មានប្រសិទ្ធភាពក្នុងសាលារៀន
                     និងសហគមន៍របស់ខ្លួន។ កម្មវិធីនេះរួមបញ្ចូលនូវ មូលដ្ឋានគ្រឹះទ្រឹស្ដី
                     បំណិនអនុវត្ត និងយុទ្ធសាស្ត្រអនុវត្ត ដើម្បីកែលម្អការបង្រៀន ការរៀន
@@ -160,7 +174,8 @@ const DetailFourCredit = () => {
                     អ្នកសិក្សានឹងទទួលបានសមត្ថភាពអនុវត្តបច្ចេកវិទ្យាអប់រំ ការតាមដានទិន្នន័យ
                     ការរៀបចំកម្មវិធីសិក្សា ការសិក្សាពីចិត្តសង្គម
                     និងភាពជាអ្នកដឹកនាំនៅមត្តេយ្យសិក្សា
-                    ដែលអាចធ្វើឱ្យពួកគាត់ពង្រឹងនូវលទ្ធផលសិក្សារបស់កុមារ និងសកម្មភាពសាលារៀន។
+                    ដែលអាចធ្វើឱ្យពួកគាត់ពង្រឹងនូវលទ្ធផលសិក្សារបស់កុមារ និងសកម្មភាពសាលារៀន។ */}
+                    {eceData.courseDescription}
                   </p>
                 </div>
               </div>
@@ -173,17 +188,18 @@ const DetailFourCredit = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
-                <SubjectCard 
+                {eceData.competencyPackages.map((_package,index)=>(
+                  <SubjectCard 
+                  key={index}
                   number="១"
-                  title="បច្ចេកវិទ្យាអប់រំ និងប្រព័ន្ធតាមដានទិន្នន័យសិក្សា"
+                  title={_package.title}
                   icon={<Monitor className="w-6 h-6" />}
                   color="blue"
-                  items={[
-                    "ICT សម្រាប់ការរៀន និងបង្រៀននៅកម្រិតការអប់រំកុមារតូច",
-                    "ការប្រើប្រាស់ប្រព័ន្ធតាមដានទិន្នន័យដើម្បីតាមដានការសិក្សារបស់កុមារ និងការអនុវត្តការងាររបស់សាលារៀន"
-                  ]}
+                  items={_package.subjects}
                 />
-                <SubjectCard 
+                ))}
+                
+                {/* <SubjectCard 
                   number="២"
                   title="កម្មវិធីសិក្សា គរុកោសល្យ និងនវានុវត្តន៍"
                   icon={<Lightbulb className="w-6 h-6" />}
@@ -204,7 +220,7 @@ const DetailFourCredit = () => {
                     "ការអនុវត្តស្ដង់ដាសាលាគំរូសម្រាប់មត្តេយ្យសិក្សា និងសមិទ្ធកម្ម",
                     "យុទ្ធសាស្ត្រដឹកនាំ និងគ្រប់គ្រងដើម្បីទទួលបានប្រសិទ្ធភាពសាលារៀន"
                   ]}
-                />
+                /> */}
               </div>
             </section>
 
@@ -219,14 +235,21 @@ const DetailFourCredit = () => {
                 
                 <h4 className="text-xl md:text-2xl font-bold mb-10 text-blue-300">នៅពេលដែលបញ្ចប់កម្មវិធីសិក្សានេះ អ្នកសិក្សានឹងមានសមត្ថភាព៖</h4>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-                  <OutcomeItem id="PLO1" text="ពន្យល់អំពីទ្រឹស្ដីសំខាន់ៗ គោលការណ៍ និងការអនុវត្តប្រសើរបំផុត ក្នុងការអប់រំកុមារតូច ភាពជាអ្នកដឹកនាំ និងនវានុវត្តន៍។" />
-                  <OutcomeItem id="PLO2" text="យល់ដឹងអំពីការប្រើប្រាស់ ICT និងប្រព័ន្ធតាមដានទិន្នន័យដើម្បីកែលម្អការសិក្សារបស់កុមារ និងសកម្មភាពសាលារៀន។" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">{
+                  eceData.programLearningOutcomes.map((_plo)=>(
+                    _plo.plos.map((__plo,index)=>(
+                      <OutcomeItem key={index} id={__plo.id} text={__plo.description} />
+                    ))
+                    
+                  ))
+                }
+                  
+                  {/* <OutcomeItem id="PLO2" text="យល់ដឹងអំពីការប្រើប្រាស់ ICT និងប្រព័ន្ធតាមដានទិន្នន័យដើម្បីកែលម្អការសិក្សារបស់កុមារ និងសកម្មភាពសាលារៀន។" />
                   <OutcomeItem id="PLO3" text="ប្រើប្រាស់ជំនាញជាក់ស្ដែងក្នុងការរចនា និងអនុវត្តតាមកម្មវិធីសិក្សាការអប់រំកុមារតូច និងវិធីសាស្ត្របង្រៀនដែលមានប្រសិទ្ធភាព។" />
                   <OutcomeItem id="PLO4" text="ប្រើប្រាស់យុទ្ធសាស្ត្រដឹកនាំ និងគ្រប់គ្រង ដើម្បីកែលម្អរដ្ឋបាលសាលាមត្តេយ្យសិក្សា និងការអនុវត្តនៅកម្រិតសាលារៀន។" />
                   <OutcomeItem id="PLO5" text="អនុវត្តការស្រាវជ្រាវប្រតិបត្តិ លទ្ធផលរាយការណ៍ និងការស្នើរដំណោះស្រាយសមស្រប ដើម្បីពង្រឹងលទ្ធផលថ្នាក់រៀន និងសាលារៀន។" />
                   <OutcomeItem id="PLO6" text="មានក្រមសីលធម៌វិជ្ជាជីវៈ ការអនុវត្តការឆ្លុះបញ្ចាំង និងភាពជាអ្នកដឹកនាំប្រកបដោយកិច្ចសហប្រតិបត្តិការនៅកម្រិតសាលារៀន និងសហគមន៍។" />
-                  <OutcomeItem id="PLO7" text="បង្ហាញនូវភាពច្នៃប្រឌិត នវានុវត្តន៍ និងការប្ដេជ្ញាចិត្តដើម្បីកែលម្អការសិក្សាចិត្តសង្គម និងការអភិវឌ្ឍគ្រប់ផ្នែកទាំងអស់សម្រាប់កុមារតូច។" />
+                  <OutcomeItem id="PLO7" text="បង្ហាញនូវភាពច្នៃប្រឌិត នវានុវត្តន៍ និងការប្ដេជ្ញាចិត្តដើម្បីកែលម្អការសិក្សាចិត្តសង្គម និងការអភិវឌ្ឍគ្រប់ផ្នែកទាំងអស់សម្រាប់កុមារតូច។" /> */}
                 </div>
               </div>
             </section>
@@ -264,6 +287,8 @@ const DetailFourCredit = () => {
           </aside>
         </div>
       </main>
+      ))}
+      
     </div>
   );
 };
